@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ckudr8chj1kgo"]
 
+[ext_resource type="Script" uid="uid://wddgu6jaiy0m" path="res://Scenes/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bsl5nod1lq4px" path="res://Assets/IMG_0294.jpeg" id="1_v0iea"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
@@ -84,6 +85,7 @@ animations = [{
 size = Vector2(170, 380)
 
 [node name="Player" type="CharacterBody2D" unique_id=1967846965]
+script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=996875227]
 position = Vector2(0, -2)
