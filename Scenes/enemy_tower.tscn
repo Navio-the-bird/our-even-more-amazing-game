@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cablf7m0j5uvw"]
+
+[ext_resource type="Script" uid="uid://bmgpnvqnio4in" path="res://Scripts/enemy_tower.gd" id="1_jmy6o"]
+[ext_resource type="Texture2D" uid="uid://1ai6rxhnmrn6" path="res://Assets/2026_04_25_0x9_Kleki.png" id="2_khwy5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssmoh"]
+size = Vector2(418, 1198)
+
+[node name="EnemyTower" type="Node2D" unique_id=422951355]
+script = ExtResource("1_jmy6o")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=123809344]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=168506836]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1695080134]
+shape = SubResource("RectangleShape2D_ssmoh")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=447109769]
+scale = Vector2(0.46109512, 0.8902077)
+texture = ExtResource("2_khwy5")
