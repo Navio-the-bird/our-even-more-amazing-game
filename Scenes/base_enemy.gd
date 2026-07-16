@@ -1,10 +1,13 @@
 class_name BaseEnemy
-extends CharacterBody2D
+extends Entity
 
 signal death(object_ref:BaseEnemy)
+
 var player:Player
-var max_speed = 2
-var acceleration = 2
+var max_speed = 1000
+var acceleration = 200
+
+var attack_distance:float = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +15,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var direction := player.global_position - global_position
-	velocity = velocity.move_toward(direction*max_speed, acceleration)
-	move_and_slide()
+	pass

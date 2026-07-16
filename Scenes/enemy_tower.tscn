@@ -14,6 +14,8 @@ unique_name_in_owner = true
 one_shot = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=168506836]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1695080134]
 shape = SubResource("RectangleShape2D_ssmoh")
