@@ -1,14 +1,14 @@
 class_name Enemy
 extends Node2D
 
-@export var config:EnemyTowerConfig
-@export var enemies:Array[EnemyInfo]
-@export var enemy_container:Node2D
+@export var config: EnemyTowerConfig
+@export var enemies: Array[EnemyInfo]
+@export var enemy_container: Node2D
 
-@export var player:Player
+@export var player: Player
 
 var timer: Timer
-var living_enemies:Array[BaseEnemy]
+var living_enemies: Array[BaseEnemy]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _set_timer_rand() -> void:
-	var r = randf_range(config.MIN_TIME_BETWEEN_SPAWN, config.MAX_TIME_BETWEEN_SPAWN)
+	var r: float = randf_range(config.MIN_TIME_BETWEEN_SPAWN, config.MAX_TIME_BETWEEN_SPAWN)
 	timer.wait_time = r
 	timer.start()
 
@@ -37,8 +37,8 @@ func _try_spawn() -> void:
 		_set_timer_rand()
 		return
 		
-	var index := randi() % length
-	var instance := enemies[index].scene.instantiate() as BaseEnemy
+	var index: int = randi() % length
+	var instance: BaseEnemy = enemies[index].scene.instantiate() as BaseEnemy
 	
 	#Track enemy
 	living_enemies.push_back(instance)
@@ -52,9 +52,9 @@ func _try_spawn() -> void:
 	_set_timer_rand()
 
 func _get_random_enemy_spawn() -> Vector2:
-	var angle = randf_range(0, PI*2)
+	var angle: float = randf_range(0, PI*2)
 	# Would you still love me if I were a donut?
-	var distance = sqrt(randf_range(config.MIN_RADIUS_FOR_SPAWN ** 2, config.MAX_RADIUS_FOR_SPAWN ** 2))
+	var distance: float = sqrt(randf_range(config.MIN_RADIUS_FOR_SPAWN ** 2, config.MAX_RADIUS_FOR_SPAWN ** 2))
 	return position + Vector2(cos(angle), sin(angle)) * distance
 
 func _enemy_died(instance:BaseEnemy) -> void:
