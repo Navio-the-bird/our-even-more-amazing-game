@@ -1,5 +1,5 @@
 class_name Enemy
-extends Node2D
+extends Entity
 
 @export var config: EnemyTowerConfig
 @export var enemies: Array[EnemyInfo]
@@ -13,8 +13,10 @@ var living_enemies: Array[BaseEnemy]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer = %SpawnTimer
+	current_max_health = 500
 	timer.timeout.connect(_try_spawn)
 	_set_timer_rand()
+	super._ready()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -62,3 +64,6 @@ func _enemy_died(instance:BaseEnemy) -> void:
 	living_enemies.erase(instance)
 	#Play death animation or whatever
 	instance.queue_free()
+
+func movement(delta: float) -> void:
+	return

@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssmoh"]
 
-[node name="Node3D" type="CharacterBody2D" unique_id=1843261999]
+[node name="Node3D" type="CharacterBody2D" unique_id=1843261999 groups=["attackable"]]
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_msnv5")

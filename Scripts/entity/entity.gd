@@ -57,3 +57,10 @@ func movement(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, current_speed)
 	
 	move_and_slide()
+
+#TODO: Animations, invincibility frames etc
+func inflict_damage(object:Node2D, value:int) -> void:
+	current_health -= value
+	print('Took ', value, 'damage! Health at ', current_health)
+	if (current_health <= 0):
+		queue_free()

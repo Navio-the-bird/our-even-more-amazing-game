@@ -6,20 +6,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssmoh"]
 size = Vector2(418, 1198)
 
-[node name="EnemyTower" type="Node2D" unique_id=422951355]
+[node name="EnemyTower" type="CharacterBody2D" unique_id=539932286 groups=["attackable"]]
 script = ExtResource("1_jmy6o")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=447109769 groups=["attackable"]]
+scale = Vector2(0.46109512, 0.8902077)
+texture = ExtResource("2_khwy5")
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=123809344]
 unique_name_in_owner = true
 one_shot = true
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=168506836]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1695080134]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1695080134]
 shape = SubResource("RectangleShape2D_ssmoh")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=447109769]
-scale = Vector2(0.46109512, 0.8902077)
-texture = ExtResource("2_khwy5")

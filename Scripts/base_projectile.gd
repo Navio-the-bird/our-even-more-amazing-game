@@ -1,9 +1,10 @@
 class_name BaseProjectile
 extends Node2D
 
-@export var direction:Vector2
-@export var speed:int = 9000
-@export var lifetime:int = 40000 #lifetime in distance
+var direction:Vector2
+var speed:int = 9000
+var lifetime:int = 40000 #lifetime in distance
+var damage:int = 10
 
 var destination:Vector2
 const threshold = 0.1 #At which threshold to end the lifecycle of this attack. Just a way to avoid == with floating points

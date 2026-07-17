@@ -1,16 +1,17 @@
-[gd_scene format=3 uid="uid://cc3ldcq4uqlci"]
+[gd_scene format=3 uid="uid://cyy0b4ib1522f"]
 
-[ext_resource type="Texture2D" uid="uid://c8bvw7swbtc7j" path="res://Assets/2026_07_17_0w7_Kleki(1)(1).png" id="1_5et7s"]
-[ext_resource type="Script" uid="uid://dma827p46xupg" path="res://Scenes/melee.gd" id="1_cc3h0"]
+[ext_resource type="Script" uid="uid://71o5kls3x4sj" path="res://Scripts/sniper_bullet.gd" id="1_hgwxb"]
+[ext_resource type="Texture2D" uid="uid://ce8hg0d28vsbi" path="res://Assets/Circle.png" id="2_hgwxb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pyt4d"]
 radius = 218.65955
 
-[node name="Melee" type="Node2D" unique_id=1366463878]
-script = ExtResource("1_cc3h0")
+[node name="SniperBullet" type="Node2D" unique_id=1366463878]
+script = ExtResource("1_hgwxb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1635692152]
-texture = ExtResource("1_5et7s")
+scale = Vector2(0.2016, 0.20959999)
+texture = ExtResource("2_hgwxb")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1286064134]
 
