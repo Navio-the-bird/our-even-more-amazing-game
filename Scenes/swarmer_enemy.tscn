@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cmj07668l5qmb"]
 
+[ext_resource type="Script" uid="uid://doi8o7dnmi4hh" path="res://Scripts/swarmer_enemy.gd" id="1_12on1"]
 [ext_resource type="Texture2D" uid="uid://ce8hg0d28vsbi" path="res://Assets/Circle.png" id="1_dcj1e"]
-[ext_resource type="Script" uid="uid://doi8o7dnmi4hh" path="res://Scripts/swarmer.gd" id="1_nkb24"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ssmoh"]
 radius = 140.08926
 
 [node name="Node3D" type="CharacterBody2D" unique_id=614583666]
 collision_layer = 2
-script = ExtResource("1_nkb24")
+script = ExtResource("1_12on1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1895124000]
 shape = SubResource("CircleShape2D_ssmoh")

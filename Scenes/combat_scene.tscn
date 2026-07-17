@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://pqf6apurqd3c"]
 
-[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://Scenes/player.tscn" id="1_kv618"]
+[ext_resource type="PackedScene" uid="uid://bocxbu1evoirn" path="res://Scenes/katana_player.tscn" id="1_sv7pb"]
+[ext_resource type="PackedScene" uid="uid://cc3ldcq4uqlci" path="res://Scenes/melee.tscn" id="2_cy4jt"]
 [ext_resource type="PackedScene" uid="uid://cablf7m0j5uvw" path="res://Scenes/enemy_tower.tscn" id="2_rdqa8"]
 [ext_resource type="Script" uid="uid://d5m5wt4pwng7" path="res://Scripts/enemy_tower_config.gd" id="3_7uj85"]
 [ext_resource type="Script" uid="uid://7alnsavttjx0" path="res://Scripts/enemy_info.gd" id="4_2ip8y"]
-[ext_resource type="PackedScene" uid="uid://cmj07668l5qmb" path="res://Scenes/swarmer.tscn" id="5_vtehv"]
+[ext_resource type="PackedScene" uid="uid://cmj07668l5qmb" path="res://Scenes/swarmer_enemy.tscn" id="5_vtehv"]
+[ext_resource type="PackedScene" uid="uid://b5yoayw1p6xs0" path="res://Scenes/ranged_enemy.tscn" id="6_loea4"]
 [ext_resource type="PackedScene" uid="uid://y5d8hxg8vk7b" path="res://Scenes/ui/pause_menu.tscn" id="6_vtehv"]
 
 [sub_resource type="Resource" id="Resource_jmy6o"]
@@ -22,21 +24,29 @@ name = "Swarmer"
 scene = ExtResource("5_vtehv")
 metadata/_custom_type_script = "uid://7alnsavttjx0"
 
+[sub_resource type="Resource" id="Resource_1f0kj"]
+script = ExtResource("4_2ip8y")
+name = "Ranged Enemny"
+scene = ExtResource("6_loea4")
+danger_weight = 2
+metadata/_custom_type_script = "uid://7alnsavttjx0"
+
 [node name="CombatScene" type="Node2D" unique_id=365978540]
 
-[node name="Player" parent="." unique_id=1967846965 instance=ExtResource("1_kv618")]
-position = Vector2(438, 235)
+[node name="KatanaPlayer" parent="." unique_id=1935757087 node_paths=PackedStringArray("attack_spawn_node") instance=ExtResource("1_sv7pb")]
+melee_attack = ExtResource("2_cy4jt")
+attack_spawn_node = NodePath("..")
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1811950799]
-position = Vector2(-439, -235)
+[node name="Camera2D" type="Camera2D" parent="KatanaPlayer" unique_id=1811950799]
+position = Vector2(-1, 0)
 zoom = Vector2(0.2, 0.2)
 
 [node name="EnemyTower" parent="." unique_id=422951355 node_paths=PackedStringArray("enemy_container", "player") instance=ExtResource("2_rdqa8")]
 position = Vector2(-773, 26)
 config = SubResource("Resource_jmy6o")
-enemies = Array[ExtResource("4_2ip8y")]([SubResource("Resource_nkb24")])
+enemies = Array[ExtResource("4_2ip8y")]([SubResource("Resource_nkb24"), SubResource("Resource_1f0kj")])
 enemy_container = NodePath("..")
-player = NodePath("../Player")
+player = NodePath("../KatanaPlayer")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=561290745]
 
