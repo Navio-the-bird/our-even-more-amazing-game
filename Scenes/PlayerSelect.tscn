@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c7aif247e37fw"]
+
+[ext_resource type="Script" uid="uid://beo8xyvuxd0km" path="res://Scenes/player_select.gd" id="1_3xe7l"]
+
+[node name="PlayerSelect" type="Control" unique_id=586804313 node_paths=PackedStringArray("katana_player_select")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3xe7l")
+katana_player_select = NodePath("KatanaPlayerSelect")
+
+[node name="KatanaPlayerSelect" type="Button" parent="." unique_id=8299723]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 400.0
+offset_bottom = 500.0
+text = "Katana"
+
+[node name="SniperPlayerSelect" type="Button" parent="." unique_id=682747321]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 100.0
+offset_right = 800.0
+offset_bottom = 500.0
+text = "Katana"
