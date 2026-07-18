@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b5yoayw1p6xs0"]
+
+[ext_resource type="Script" uid="uid://bi8qfirrbosjc" path="res://Scripts/ranged_enemy.gd" id="1_msnv5"]
+[ext_resource type="Texture2D" uid="uid://bsl5nod1lq4px" path="res://Assets/IMG_0294.jpeg" id="2_5x7gc"]
+[ext_resource type="PackedScene" uid="uid://cyy0b4ib1522f" path="res://Scenes/sniper_bullet.tscn" id="2_pubb5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssmoh"]
+
+[node name="Node3D" type="CharacterBody2D" unique_id=1843261999 groups=["attackable"]]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_msnv5")
+projectile_scene = ExtResource("2_pubb5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=255611030]
+scale = Vector2(0.07212885, 0.12698412)
+texture = ExtResource("2_5x7gc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=234192071]
+shape = SubResource("CapsuleShape2D_ssmoh")
+
+[node name="Cooldown" type="Timer" parent="." unique_id=1529227657]
+unique_name_in_owner = true

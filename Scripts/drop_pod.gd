@@ -32,7 +32,9 @@ func _on_open() -> void:
 	if (_opened): return
 	#Spawn here
 	enemy.global_position = global_position
-	get_parent().add_child(enemy)
+	var parent := get_parent()
+	(enemy as BaseEnemy).projectile_spawn_node = parent
+	parent.add_child(enemy)
 	queue_free()
 	_opened = true
 

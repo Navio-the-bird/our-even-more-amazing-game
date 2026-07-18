@@ -8,6 +8,7 @@ var damage:int = 10
 
 var destination:Vector2
 const threshold = 0.1 #At which threshold to end the lifecycle of this attack. Just a way to avoid == with floating points
+var creator:Entity #Who shot this?
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

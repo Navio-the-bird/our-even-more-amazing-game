@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://pqf6apurqd3c"]
 
+[ext_resource type="Script" uid="uid://crdi48hfwdqq0" path="res://Scripts/combat_scene.gd" id="1_cy4jt"]
 [ext_resource type="PackedScene" uid="uid://cablf7m0j5uvw" path="res://Scenes/enemy_tower.tscn" id="2_rdqa8"]
 [ext_resource type="Script" uid="uid://d5m5wt4pwng7" path="res://Scripts/enemy_tower_config.gd" id="3_7uj85"]
 [ext_resource type="Script" uid="uid://7alnsavttjx0" path="res://Scripts/enemy_info.gd" id="4_2ip8y"]
 [ext_resource type="PackedScene" uid="uid://n3rm4h2yi6xq" path="res://Scenes/swarmer_enemy.tscn" id="5_vtehv"]
-[ext_resource type="PackedScene" uid="uid://b5yoayw1p6xs0" path="res://Scenes/ranged_enemy.tscn" id="6_loea4"]
+[ext_resource type="PackedScene" uid="uid://cbpmt4otlisnm" path="res://Scenes/ranged_enemy.tscn" id="6_loea4"]
 [ext_resource type="PackedScene" uid="uid://bifl70eblpivq" path="res://Scenes/drop_pod.tscn" id="6_sv7pb"]
 [ext_resource type="PackedScene" uid="uid://y5d8hxg8vk7b" path="res://Scenes/ui/pause_menu.tscn" id="6_vtehv"]
 [ext_resource type="PackedScene" uid="uid://5kfgct5q1wio" path="res://Scenes/sniper_player.tscn" id="7_loea4"]
@@ -31,7 +32,10 @@ scene = ExtResource("6_loea4")
 danger_weight = 2
 metadata/_custom_type_script = "uid://7alnsavttjx0"
 
-[node name="CombatScene" type="Node2D" unique_id=365978540]
+[node name="CombatScene" type="Node2D" unique_id=365978540 node_paths=PackedStringArray("player", "pause_menu")]
+script = ExtResource("1_cy4jt")
+player = NodePath("SniperPlayer")
+pause_menu = NodePath("CanvasLayer/PauseMenu")
 
 [node name="EnemyTower" parent="." unique_id=422951355 node_paths=PackedStringArray("enemy_container", "player") instance=ExtResource("2_rdqa8")]
 position = Vector2(-773, 26)

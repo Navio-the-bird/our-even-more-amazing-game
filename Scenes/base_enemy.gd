@@ -7,10 +7,14 @@ var player:Player
 var max_speed = 1000
 var acceleration = 200
 
+var pursue_distance: float = 2000 #Distance at which to start pursuing player
 var attack_distance:float = 100
+var _pursuing:bool = false
 var _attacking:bool = false
 var _cooling_down := false
 var _cooldown: float =  1
+
+var projectile_spawn_node:Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,7 +28,7 @@ func _process(delta: float) -> void:
 
 func _try_attack() -> void:
 	if (_attacking || _cooling_down): return
-	attack()
+	self.attack()
 	_cooling_down = true
 	%Cooldown.start()
 
@@ -48,6 +52,11 @@ func get_player_direction() -> Vector2:
 func movement(delta: float) -> void:
 	var base_direction := get_player_direction()
 	var distance := base_direction.length()
+	_pursuing = distance < pursue_distance
+		
+	if (!_pursuing): 
+		#Ideally do idle movements or something
+		return
 	var direction := base_direction.normalized()
 	
 	if (distance < attack_distance):
