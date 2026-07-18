@@ -27,6 +27,8 @@ func generate_enemy_tower_list(dup_enemy_list : Array[EnemyInfo]) -> Array[Enemy
 
 
 ## Generates a lot of towers and returns their holder
+## "Sets the scene, romantically" 
+## - @Navio
 func spawn_a_shitload_of_towers(
 		tc : EnemyTowerConfig, 
 		possible_enemies : Array[EnemyInfo],
