@@ -1,11 +1,19 @@
 class_name EnemyTower
 extends Entity
 
+## Tower config
 @export var config: EnemyTowerConfig
+
+## List of possible enemies to spawn
 @export var enemies: Array[EnemyInfo]
+
+## Container for all enemy nodes, can be shared across towers
 @export var enemy_container: Node2D
 
+## Reference to the player node
 @export var player: Player
+
+## ??
 @export var drop_pod_scene: PackedScene
 
 var timer: Timer
