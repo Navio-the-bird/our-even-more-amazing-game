@@ -96,10 +96,8 @@ attack={
 2d_physics/layer_1="Physical Objects"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Enemies"
-2d_physics/layer_4="Player Melee"
-2d_physics/layer_5="Player Ranged"
-2d_physics/layer_6="Enemy Melee"
-2d_physics/layer_7="Enemy Ranged"
+2d_physics/layer_4="Player Attack"
+2d_physics/layer_5="Enemy Attack"
 
 [physics]
 

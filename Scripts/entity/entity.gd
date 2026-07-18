@@ -9,7 +9,7 @@ var current_speed: float
 var current_max_health: int
 var current_health: int
 
-
+var _alive:bool = true
 var input_dir : Vector2
 
 
@@ -36,6 +36,7 @@ func _caculate_current_stats():
 
 
 func _physics_process(delta: float) -> void:
+	if (!_alive): return
 	movement(delta)
 	update_effect(delta)
 
@@ -60,7 +61,16 @@ func movement(delta: float) -> void:
 
 #TODO: Animations, invincibility frames etc
 func inflict_damage(object:Node2D, value:int) -> void:
+	if (!_alive): return
 	current_health -= value
-	print('Took ', value, 'damage! Health at ', current_health)
 	if (current_health <= 0):
-		queue_free()
+		_just_died()
+		return
+
+func _just_died():
+	_alive = false
+	_handle_death()
+
+func _handle_death():
+	print('No custom death action!!!! Freeing object')
+	queue_free()

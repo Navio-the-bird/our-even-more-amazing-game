@@ -1,21 +1,115 @@
-[gd_scene format=3 uid="uid://b5yoayw1p6xs0"]
+[gd_scene format=3 uid="uid://cbpmt4otlisnm"]
 
-[ext_resource type="Script" uid="uid://bi8qfirrbosjc" path="res://Scripts/ranged_enemy.gd" id="1_msnv5"]
-[ext_resource type="Texture2D" uid="uid://bsl5nod1lq4px" path="res://Assets/IMG_0294.jpeg" id="2_5x7gc"]
+[ext_resource type="PackedScene" uid="uid://ddl3jmeul8ca" path="res://Scenes/base_enemy.tscn" id="1_msnv5"]
+[ext_resource type="Script" uid="uid://bi8qfirrbosjc" path="res://Scripts/ranged_enemy.gd" id="2_5x7gc"]
+[ext_resource type="PackedScene" uid="uid://wwk1bht5ds86" path="res://Scenes/enemy_projectile.tscn" id="3_1qm41"]
+[ext_resource type="Texture2D" uid="uid://bsl5nod1lq4px" path="res://Assets/IMG_0294.jpeg" id="3_nqq2h"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssmoh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03w70"]
+size = Vector2(296, 672)
 
-[node name="Node3D" type="CharacterBody2D" unique_id=1843261999 groups=["attackable"]]
-collision_layer = 4
-collision_mask = 5
-script = ExtResource("1_msnv5")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qm41"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(1428, 1071, 1428, 1071)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=255611030]
-scale = Vector2(0.07212885, 0.12698412)
-texture = ExtResource("2_5x7gc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5pa5"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(1428, 0, 1428, 1071)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=234192071]
-shape = SubResource("CapsuleShape2D_ssmoh")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvp7b"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(2856, 0, 1428, 1071)
 
-[node name="Cooldown" type="Timer" parent="." unique_id=1529227657]
-unique_name_in_owner = true
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcaim"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(4284, 0, 1428, 1071)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbmq5"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(4284, 1071, 1428, 1071)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kybcg"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(4284, 2142, 1428, 1071)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg1bg"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(4284, 3213, 1428, 1071)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s86nv"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(2856, 3213, 1428, 1071)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ci714"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(1428, 3213, 1428, 1071)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7aa5y"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(1428, 2142, 1428, 1071)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4odxm"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(2856, 2142, 1428, 1071)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q737t"]
+atlas = ExtResource("3_nqq2h")
+region = Rect2(2856, 1071, 1428, 1071)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ssmoh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nqq2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qm41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5pa5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvp7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcaim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbmq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kybcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg1bg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s86nv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ci714")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7aa5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4odxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q737t")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RangedEnemy" unique_id=1572276426 instance=ExtResource("1_msnv5")]
+script = ExtResource("2_5x7gc")
+projectile_scene = ExtResource("3_1qm41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=381256719]
+shape = SubResource("RectangleShape2D_03w70")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2" unique_id=528964137]
+scale = Vector2(0.053571425, 0.16153128)
+sprite_frames = SubResource("SpriteFrames_ssmoh")

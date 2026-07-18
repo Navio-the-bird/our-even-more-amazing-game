@@ -8,7 +8,7 @@
 radius = 40.0
 height = 168.0
 
-[node name="SniperPlayer" type="CharacterBody2D" unique_id=1934142177]
+[node name="SniperPlayer" type="CharacterBody2D" unique_id=1934142177 groups=["attackable"]]
 collision_layer = 2
 script = ExtResource("1_dn5mc")
 sniper_bullet = ExtResource("2_w1354")
@@ -19,3 +19,6 @@ shape = SubResource("CapsuleShape2D_ssmoh")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=146430318]
 scale = Vector2(0.07936508, 0.18783069)
 texture = ExtResource("1_ndy3m")
+
+[node name="Cooldown" type="Timer" parent="." unique_id=1317381364]
+unique_name_in_owner = true

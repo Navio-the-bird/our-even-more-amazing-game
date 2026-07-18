@@ -11,6 +11,10 @@ var projectile_scene: PackedScene
 const SPEEDX: float = 800.0
 const SPEEDY: float = 700.0
 
+var cooldown:float = 1
+
+signal death
+
 func _ready() -> void:
 	current_speed = 3000
 
@@ -25,8 +29,14 @@ func attack() -> void:
 		return
 	var target := get_global_mouse_position()
 	var instance := projectile_scene.instantiate() as DamagingProjectile
+	instance.creator = self
 	var dir := (target - global_position).normalized()
 	const offset := 50
 	instance.global_position = global_position + dir*offset
 	instance.direction = target - global_position
 	attack_spawn_node.add_child(instance)
+
+func _handle_death():
+	print('Player is dead!')
+	
+	death.emit()

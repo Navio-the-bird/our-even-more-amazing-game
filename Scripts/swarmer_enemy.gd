@@ -7,4 +7,6 @@ func _ready() -> void:
 	acceleration = 800
 
 func attack() -> void:
+	_attacking = true
 	print('Swarmer attack!')
+	_attacking = false

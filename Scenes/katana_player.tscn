@@ -10,7 +10,7 @@ height = 606.0
 [node name="KatanaPlayer" type="CharacterBody2D" unique_id=1935757087]
 script = ExtResource("1_noi1j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944545367]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944545367 groups=["attackable"]]
 shape = SubResource("CapsuleShape2D_ssmoh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=882513912]
