@@ -9,6 +9,7 @@ radius = 40.0
 height = 168.0
 
 [node name="SniperPlayer" type="CharacterBody2D" unique_id=1934142177]
+collision_layer = 2
 script = ExtResource("1_dn5mc")
 sniper_bullet = ExtResource("2_w1354")
 

@@ -14,6 +14,8 @@ scale = Vector2(0.2016, 0.20959999)
 texture = ExtResource("2_hgwxb")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1286064134]
+collision_layer = 8
+collision_mask = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2008484703]
 shape = SubResource("CircleShape2D_pyt4d")

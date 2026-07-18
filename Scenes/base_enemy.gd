@@ -8,17 +8,37 @@ var max_speed = 1000
 var acceleration = 200
 
 var attack_distance:float = 100
+var _attacking:bool = false
+var _cooling_down := false
+var _cooldown: float =  1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	%Cooldown.wait_time = _cooldown
+	%Cooldown.timeout.connect(_reset_cooldown)
+	super._ready()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
+func _try_attack() -> void:
+	if (_attacking || _cooling_down): return
+	attack()
+	_cooling_down = true
+	%Cooldown.start()
+
+func _reset_cooldown() -> void:
+	print('Attack cooldown done')
+	_cooling_down = false
+
+#I considered making a base scene and adding a cooldown timer to it, 
+#then letting child scenes use it and provide their own cooldown
+#I decided that maybe the children would need too-specific implementations wrt animations etc
 func attack() -> void:
+	_attacking = true
 	print("Attacking!!! .......except it's not implemented yet :>")
+	_attacking = false
 
 #Returns direction UN-NORMALISED to allow distance calc
 func get_player_direction() -> Vector2:
@@ -32,7 +52,7 @@ func movement(delta: float) -> void:
 	
 	if (distance < attack_distance):
 		velocity = Vector2(0, 0)
-		attack()
+		_try_attack()
 	else:
 		velocity = velocity.move_toward(direction *max_speed, acceleration*delta)
 	move_and_slide()

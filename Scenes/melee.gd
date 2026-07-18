@@ -6,6 +6,7 @@ func _ready() -> void:
 	speed = 9000
 	lifetime = 400
 	damage = 20
+	pierce = 0
 	super._ready()
 
 func _on_collide(body: Node2D) -> void:

@@ -6,12 +6,15 @@ extends Entity
 @export var enemy_container: Node2D
 
 @export var player: Player
+@export var drop_pod_scene: PackedScene
 
 var timer: Timer
 var living_enemies: Array[BaseEnemy]
+var _viewport_height:float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	_viewport_height = get_viewport_rect().size.y / get_canvas_transform().get_scale().y
 	timer = %SpawnTimer
 	current_max_health = 500
 	timer.timeout.connect(_try_spawn)
@@ -29,7 +32,7 @@ func _set_timer_rand() -> void:
 
 #Can be overridden
 func _try_spawn() -> void:
-	return
+	#return
 	var length := len(enemies)
 	if (length == 0):
 		print('No enemies')
@@ -40,17 +43,21 @@ func _try_spawn() -> void:
 		_set_timer_rand()
 		return
 		
-	var index: int = 1# randi() % length
+	var index: int = randi() % length
 	var instance: BaseEnemy = enemies[index].scene.instantiate() as BaseEnemy
 	
 	#Track enemy
 	living_enemies.push_back(instance)
 	instance.death.connect(_enemy_died)
-	
-	#Chuck it into the scene
 	instance.player = player
-	instance.global_position = _get_random_enemy_spawn()
-	enemy_container.add_child(instance)
+	
+	#Chuck it into the scene with a pod
+	var spawn_offset := Vector2(0,  _viewport_height + 100)
+	var pod_instance := drop_pod_scene.instantiate() as DropPod
+	pod_instance.destination = _get_random_enemy_spawn()
+	pod_instance.global_position = pod_instance.destination - spawn_offset
+	pod_instance.enemy = instance
+	enemy_container.add_child(pod_instance)
 	
 	_set_timer_rand()
 
