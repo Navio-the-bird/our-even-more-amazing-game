@@ -43,7 +43,7 @@ func _try_spawn() -> void:
 		_set_timer_rand()
 		return
 		
-	var index: int = 1#randi() % length
+	var index: int = randi() % length
 	var instance: BaseEnemy = enemies[index].scene.instantiate() as BaseEnemy
 	
 	#Track enemy

@@ -17,6 +17,8 @@ signal death
 
 func _ready() -> void:
 	current_speed = 3000
+	current_max_health = 100
+	current_health = current_max_health
 
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)

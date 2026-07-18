@@ -130,7 +130,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="BaseEnemy" unique_id=262025010 groups=["attackable"] instance=ExtResource("1_4xa7c")]
+[node name="BaseEnemy" unique_id=262025010 instance=ExtResource("1_4xa7c")]
 script = ExtResource("1_12on1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=19719097]
