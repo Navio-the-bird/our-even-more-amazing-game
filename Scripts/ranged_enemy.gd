@@ -4,8 +4,8 @@ extends BaseEnemy
 @export var projectile_scene:PackedScene
 
 func _ready() -> void:
-	attack_distance = 1500 #Distance at which the enemy starts firing
-	pursue_distance = 4000
+	attack_distance = 2500 #Distance at which the enemy starts firing
+	pursue_distance = 5000
 	acceleration = 500
 	_cooldown = 2
 	super._ready()

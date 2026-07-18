@@ -1,6 +1,8 @@
 extends Control
 class_name PauseMenu
 
+signal quit_game
+
 func _ready() -> void:
 	self.hide()
 
@@ -11,10 +13,20 @@ func _input(event: InputEvent) -> void:
 
 func toggle_menu() -> void:
 	if visible:
-		self.hide()
-		get_tree().paused = false
-		ControlManager.enable_action_group(ControlManager.player_actions)
+		_unpause_game()
 	else:
-		self.show()
-		get_tree().paused = true
-		ControlManager.disable_action_group(ControlManager.player_actions)
+		_pause_game()
+
+func _unpause_game():
+	self.hide()
+	get_tree().paused = false
+	ControlManager.enable_action_group(ControlManager.player_actions)
+	
+func _pause_game():
+	self.show()
+	get_tree().paused = true
+	ControlManager.disable_action_group(ControlManager.player_actions)
+
+func _on_quit_pressed() -> void:
+	_unpause_game()
+	quit_game.emit()

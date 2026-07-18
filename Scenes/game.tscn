@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://yicge48108e0"]
+
+[ext_resource type="Script" uid="uid://jv5gempkmtvq" path="res://Scripts/game.gd" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://bocxbu1evoirn" path="res://Scenes/katana_player.tscn" id="2_h4fw4"]
+[ext_resource type="PackedScene" uid="uid://c7aif247e37fw" path="res://Scenes/ui/PlayerSelect.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://5kfgct5q1wio" path="res://Scenes/sniper_player.tscn" id="3_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://cablf7m0j5uvw" path="res://Scenes/enemy_tower.tscn" id="4_o5yvi"]
+[ext_resource type="PackedScene" uid="uid://bifl70eblpivq" path="res://Scenes/drop_pod.tscn" id="5_rku1e"]
+[ext_resource type="Script" uid="uid://7alnsavttjx0" path="res://Scripts/enemy_info.gd" id="6_rfjv2"]
+[ext_resource type="PackedScene" uid="uid://n3rm4h2yi6xq" path="res://Scenes/swarmer_enemy.tscn" id="7_1phco"]
+[ext_resource type="PackedScene" uid="uid://cbpmt4otlisnm" path="res://Scenes/ranged_enemy.tscn" id="8_nb51f"]
+[ext_resource type="PackedScene" uid="uid://y5d8hxg8vk7b" path="res://Scenes/ui/pause_menu.tscn" id="10_ldgsr"]
+
+[sub_resource type="Resource" id="Resource_qxrlw"]
+script = ExtResource("6_rfjv2")
+name = "Swarmer"
+scene = ExtResource("7_1phco")
+metadata/_custom_type_script = "uid://7alnsavttjx0"
+
+[sub_resource type="Resource" id="Resource_wrm1d"]
+script = ExtResource("6_rfjv2")
+name = "Ranged"
+scene = ExtResource("8_nb51f")
+danger_weight = 2
+metadata/_custom_type_script = "uid://7alnsavttjx0"
+
+[node name="Game" type="Node2D" unique_id=572475874]
+script = ExtResource("1_ebmjs")
+katana_player_scene = ExtResource("2_h4fw4")
+sniper_player_scene = ExtResource("3_ldgsr")
+tower_scene = ExtResource("4_o5yvi")
+drop_pod_scene = ExtResource("5_rku1e")
+possible_enemies = Array[ExtResource("6_rfjv2")]([SubResource("Resource_qxrlw"), SubResource("Resource_wrm1d")])
+
+[node name="CombatContainer" type="Node2D" parent="." unique_id=1632798665]
+unique_name_in_owner = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1548426822]
+
+[node name="PlayerSelect" parent="CanvasLayer" unique_id=586804313 instance=ExtResource("2_qxrlw")]
+unique_name_in_owner = true
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1537619581 instance=ExtResource("10_ldgsr")]
+unique_name_in_owner = true
+
+[connection signal="SelectedKatanaPlayer" from="CanvasLayer/PlayerSelect" to="." method="_select_player_katana"]
+[connection signal="SelectedSniperPlayer" from="CanvasLayer/PlayerSelect" to="." method="_select_player_sniper"]
+[connection signal="quit_game" from="CanvasLayer/PauseMenu" to="." method="_on_pause_menu_quit_game"]

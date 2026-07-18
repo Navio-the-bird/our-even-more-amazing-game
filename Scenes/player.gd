@@ -2,7 +2,7 @@
 class_name Player
 extends Entity
 
-@export var controller: PlayerControllerBase
+#@export var controller: PlayerControllerBase
 @export var attack_spawn_node: Node2D
 
 #Needs to be set by child class
@@ -21,6 +21,7 @@ func _ready() -> void:
 	current_health = current_max_health
 
 func _physics_process(delta: float) -> void:
+	if (!_alive): return
 	super._physics_process(delta)
 	if Input.is_action_just_pressed("attack"):
 		attack()
@@ -31,9 +32,10 @@ func attack() -> void:
 		return
 	var target := get_global_mouse_position()
 	var instance := projectile_scene.instantiate() as DamagingProjectile
-	instance.creator = self
 	var dir := (target - global_position).normalized()
 	const offset := 50
+	instance.creator = self
+	instance.global_rotation = dir.angle()
 	instance.global_position = global_position + dir*offset
 	instance.direction = target - global_position
 	attack_spawn_node.add_child(instance)

@@ -61,6 +61,7 @@ theme_override_font_sizes/font_size = 24
 text = "Resume"
 
 [node name="Button2" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=756609083]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 24
@@ -73,3 +74,4 @@ theme_override_font_sizes/font_size = 24
 text = "Quit to Main Menu"
 
 [connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/Button" to="." method="toggle_menu"]
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/Button3" to="." method="_on_quit_pressed"]

@@ -13,7 +13,6 @@ extends Entity
 ## Reference to the player node
 @export var player: Player
 
-## ??
 @export var drop_pod_scene: PackedScene
 
 var timer: Timer

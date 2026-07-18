@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://cyy0b4ib1522f"]
 
 [ext_resource type="Script" uid="uid://71o5kls3x4sj" path="res://Scripts/sniper_bullet.gd" id="1_hgwxb"]
-[ext_resource type="Texture2D" uid="uid://ce8hg0d28vsbi" path="res://Assets/Circle.png" id="2_hgwxb"]
+[ext_resource type="Texture2D" uid="uid://byi6mv0chmbbx" path="res://Assets/player_projectile.png" id="2_hgwxb"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pyt4d"]
-radius = 218.65955
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvcc5"]
+size = Vector2(158, 24)
 
 [node name="Sniper Bullet" type="Node2D" unique_id=1366463878]
 script = ExtResource("1_hgwxb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1635692152]
-scale = Vector2(0.2016, 0.20959999)
+scale = Vector2(1.0125, 0.40579712)
 texture = ExtResource("2_hgwxb")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1286064134]
@@ -18,6 +18,6 @@ collision_layer = 8
 collision_mask = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2008484703]
-shape = SubResource("CircleShape2D_pyt4d")
+shape = SubResource("RectangleShape2D_kvcc5")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_collide"]
