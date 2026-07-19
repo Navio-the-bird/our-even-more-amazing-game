@@ -20,12 +20,15 @@ func toggle_menu() -> void:
 func _unpause_game():
 	self.hide()
 	get_tree().paused = false
-	ControlManager.enable_action_group(ControlManager.player_actions)
+	#ControlManager.enable_action_group(ControlManager.player_actions)
 	
 func _pause_game():
+	if %MainMenu and %MainMenu.visible:
+		return
+	
 	self.show()
 	get_tree().paused = true
-	ControlManager.disable_action_group(ControlManager.player_actions)
+	#ControlManager.disable_action_group(ControlManager.player_actions)
 
 func _on_quit_pressed() -> void:
 	_unpause_game()

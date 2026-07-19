@@ -28,11 +28,16 @@ var active_enemy_towers: Array[EnemyTower]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	active_enemy_towers = []
+	
+	await get_tree().create_timer(1).timeout
+	%MainMenu/PlayerSelect.SelectedKatanaPlayer.connect(_select_player_katana)
+	%MainMenu/PlayerSelect.SelectedSniperPlayer.connect(_select_player_sniper)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
 
 
 func _select_player_katana() -> void:
@@ -52,7 +57,7 @@ func _on_pause_menu_quit_game() -> void:
 	_clear_combat()
 	%Hud.hide()
 	%PauseMenu.hide()
-	%PlayerSelect.show()
+	%MainMenu.show()
 
 func _on_tower_destroy(obj:EnemyTower):
 	active_enemy_towers.erase(obj)
@@ -84,7 +89,7 @@ func _start_combat():
 	player.attack_spawn_node = %CombatContainer
 	player.add_child(camera)
 	%CombatContainer.add_child(player)
-	%PlayerSelect.hide()
+	%MainMenu.hide()
 	%Hud.set_tower_count(TOWER_AMT)
 	%Hud.show()
 
