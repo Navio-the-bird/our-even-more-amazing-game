@@ -8,12 +8,12 @@
 radius = 125.0
 height = 606.0
 
-[node name="KatanaPlayer" type="CharacterBody2D" unique_id=1935757087]
+[node name="KatanaPlayer" type="CharacterBody2D" unique_id=1935757087 groups=["attackable"]]
 collision_layer = 2
 script = ExtResource("1_noi1j")
 melee_attack = ExtResource("2_6boay")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944545367 groups=["attackable"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944545367]
 shape = SubResource("CapsuleShape2D_ssmoh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=882513912]

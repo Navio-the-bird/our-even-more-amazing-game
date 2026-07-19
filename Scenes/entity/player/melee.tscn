@@ -1,23 +1,25 @@
 [gd_scene format=3 uid="uid://cc3ldcq4uqlci"]
 
-[ext_resource type="Texture2D" uid="uid://c8bvw7swbtc7j" path="res://Assets/2026_07_17_0w7_Kleki(1)(1).png" id="1_5et7s"]
 [ext_resource type="Script" uid="uid://dma827p46xupg" path="res://Scenes/entity/player/melee.gd" id="1_cc3h0"]
+[ext_resource type="Texture2D" uid="uid://r76ojyt87bx" path="res://Assets/katana_slice.png" id="2_6wqsy"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pyt4d"]
-radius = 437.32
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6ibk"]
+size = Vector2(1255, 250)
 
 [node name="Melee" type="Node2D" unique_id=1366463878]
 script = ExtResource("1_cc3h0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1635692152]
-scale = Vector2(2, 2)
-texture = ExtResource("1_5et7s")
+position = Vector2(146, -4)
+scale = Vector2(1.35141, 1.9692308)
+texture = ExtResource("2_6wqsy")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1286064134]
 collision_layer = 8
 collision_mask = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2008484703]
-shape = SubResource("CircleShape2D_pyt4d")
+position = Vector2(152, 2)
+shape = SubResource("RectangleShape2D_a6ibk")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_collide"]

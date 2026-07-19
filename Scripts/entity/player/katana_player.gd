@@ -4,5 +4,5 @@ extends Player
 
 func _ready() -> void:
 	projectile_scene = melee_attack
-	cooldown = 0.1
+	attack_cooldown = 0.3
 	super._ready()
