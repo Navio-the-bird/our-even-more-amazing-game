@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://l613xwf8hieq"]
+
+[ext_resource type="FontFile" uid="uid://dvfb4u6y6te66" path="res://Assets/Black_Ops_One Font/BlackOpsOne-Regular.ttf" id="1_di0fq"]
+
+[resource]
+resource_name = "PlayerSelectTheme"
+default_font = ExtResource("1_di0fq")
+default_font_size = 22

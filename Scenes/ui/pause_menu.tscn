@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://y5d8hxg8vk7b"]
 
+[ext_resource type="Theme" uid="uid://l613xwf8hieq" path="res://player_select_theme.tres" id="1_36lgw"]
 [ext_resource type="Script" uid="uid://gmfxtf6mbnbq" path="res://Scenes/ui/pause_menu.gd" id="1_miudh"]
 
 [node name="PauseMenu" type="Control" unique_id=1537619581]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_36lgw")
 script = ExtResource("1_miudh")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=975404766]
