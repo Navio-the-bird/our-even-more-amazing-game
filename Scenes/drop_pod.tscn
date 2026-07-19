@@ -1,17 +1,28 @@
 [gd_scene format=3 uid="uid://bifl70eblpivq"]
 
-[ext_resource type="Texture2D" uid="uid://b2u03yvjyj3wf" path="res://Assets/2026_07_18_0h9_Kleki(1).png" id="1_15k62"]
 [ext_resource type="Script" uid="uid://nou4xipir65j" path="res://Scripts/drop_pod.gd" id="1_g1tw0"]
+[ext_resource type="Texture2D" uid="uid://cucchgjevou0c" path="res://Assets/enemy_pod1.png" id="3_5d1q2"]
+[ext_resource type="Texture2D" uid="uid://bqlkk2kc7ddam" path="res://Assets/enemy_pod2.png" id="4_tjfhu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssmoh"]
-size = Vector2(226, 384)
+size = Vector2(362, 380)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ssmoh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5d1q2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tjfhu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="DropPod" type="CharacterBody2D" unique_id=1146549406]
 script = ExtResource("1_g1tw0")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=945418154]
-scale = Vector2(0.5018587, 0.59402984)
-texture = ExtResource("1_15k62")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=178562909]
 shape = SubResource("RectangleShape2D_ssmoh")
@@ -19,3 +30,9 @@ disabled = true
 
 [node name="OpeningTimer" type="Timer" parent="." unique_id=634099105]
 unique_name_in_owner = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2140056558]
+scale = Vector2(0.46114647, 0.44298244)
+sprite_frames = SubResource("SpriteFrames_ssmoh")
+autoplay = "default"
+frame_progress = 0.33638424

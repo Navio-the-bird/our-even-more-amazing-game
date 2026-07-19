@@ -85,14 +85,17 @@ func inflict_damage(object:Node2D, value:int) -> void:
 		_just_died()
 		return
 
+var damage_tween:Tween
 func _indicate_damage() -> void:
 	if (!sprite):
 		print('No sprite set!')
 		return
 
-	var tween = create_tween()
+	if (damage_tween):
+		damage_tween.kill()
+	damage_tween = create_tween()
 	sprite.modulate = Color(0.912, 0.0, 0.121, 0.502)
-	tween.tween_property(sprite, "modulate", Color.WHITE, 0.30)
+	damage_tween.tween_property(sprite, "modulate", Color.WHITE, 0.30)
 
 func _just_died():
 	_alive = false

@@ -8,6 +8,7 @@ func _ready() -> void:
 	pursue_distance = 5000
 	acceleration = 500
 	_cooldown = 2
+	current_max_health = 120
 	sprite = $AnimatedSprite2D
 	super._ready()
 
