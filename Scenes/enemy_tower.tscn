@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bmgpnvqnio4in" path="res://Scripts/enemy_tower.gd" id="1_jmy6o"]
 [ext_resource type="Script" uid="uid://d5m5wt4pwng7" path="res://Scripts/enemy_tower_config.gd" id="2_drsoa"]
 [ext_resource type="Texture2D" uid="uid://1ai6rxhnmrn6" path="res://Assets/2026_04_25_0x9_Kleki.png" id="2_khwy5"]
+[ext_resource type="PackedScene" uid="uid://cu7ywplchx2qh" path="res://Scenes/broken_tower.tscn" id="3_wysaq"]
 
 [sub_resource type="Resource" id="Resource_w1354"]
 script = ExtResource("2_drsoa")
@@ -14,6 +15,7 @@ size = Vector2(418, 1198)
 [node name="EnemyTower" type="CharacterBody2D" unique_id=539932286 groups=["attackable"]]
 script = ExtResource("1_jmy6o")
 config = SubResource("Resource_w1354")
+broken_tower_scene = ExtResource("3_wysaq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=447109769 groups=["attackable"]]
 scale = Vector2(0.46109512, 0.8902077)

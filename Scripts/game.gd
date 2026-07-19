@@ -84,6 +84,7 @@ func _start_combat():
 	player.add_child(camera)
 	%CombatContainer.add_child(player)
 	%PlayerSelect.hide()
+	%Hud.set_tower_count(TOWER_AMT)
 	%Hud.show()
 
 func _get_random_tower_config():

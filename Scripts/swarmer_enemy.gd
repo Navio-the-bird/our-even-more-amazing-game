@@ -9,6 +9,7 @@ func _ready() -> void:
 	_cooldown = 0.5
 	current_max_health = 50
 	pursue_distance = 4000
+	sprite = $AnimatedSprite2D
 	super._ready()
 
 func attack() -> void:

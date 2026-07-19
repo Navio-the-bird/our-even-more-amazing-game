@@ -3,104 +3,28 @@
 [ext_resource type="PackedScene" uid="uid://ddl3jmeul8ca" path="res://Scenes/base_enemy.tscn" id="1_msnv5"]
 [ext_resource type="Script" uid="uid://bi8qfirrbosjc" path="res://Scripts/ranged_enemy.gd" id="2_5x7gc"]
 [ext_resource type="PackedScene" uid="uid://wwk1bht5ds86" path="res://Scenes/enemy_projectile.tscn" id="3_1qm41"]
-[ext_resource type="Texture2D" uid="uid://bsl5nod1lq4px" path="res://Assets/IMG_0294.jpeg" id="3_nqq2h"]
+[ext_resource type="Texture2D" uid="uid://c4gxutvk0kni7" path="res://Assets/r_e_idle_1.png" id="4_bvp7b"]
+[ext_resource type="Texture2D" uid="uid://chemrxpfgt85c" path="res://Assets/r_e_idle_2.png" id="5_lcaim"]
+[ext_resource type="Texture2D" uid="uid://c1ft5bek38fy8" path="res://Assets/r_e_idle_3.png" id="6_pbmq5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03w70"]
-size = Vector2(296, 672)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1qm41"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(1428, 1071, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f5pa5"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(1428, 0, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bvp7b"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(2856, 0, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lcaim"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(4284, 0, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbmq5"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(4284, 1071, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kybcg"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(4284, 2142, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xg1bg"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(4284, 3213, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s86nv"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(2856, 3213, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ci714"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(1428, 3213, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7aa5y"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(1428, 2142, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4odxm"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(2856, 2142, 1428, 1071)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q737t"]
-atlas = ExtResource("3_nqq2h")
-region = Rect2(2856, 1071, 1428, 1071)
+size = Vector2(244, 386)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ssmoh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_nqq2h")
+"texture": ExtResource("4_bvp7b")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1qm41")
+"texture": ExtResource("5_lcaim")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f5pa5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bvp7b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lcaim")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pbmq5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kybcg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xg1bg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s86nv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ci714")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7aa5y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4odxm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q737t")
+"texture": ExtResource("6_pbmq5")
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="RangedEnemy" unique_id=1572276426 instance=ExtResource("1_msnv5")]
@@ -111,5 +35,8 @@ projectile_scene = ExtResource("3_1qm41")
 shape = SubResource("RectangleShape2D_03w70")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2" unique_id=528964137]
-scale = Vector2(0.053571425, 0.16153128)
+scale = Vector2(1.0526316, 1.1346706)
 sprite_frames = SubResource("SpriteFrames_ssmoh")
+autoplay = "default"
+frame = 2
+frame_progress = 0.8837519

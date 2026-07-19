@@ -21,6 +21,8 @@ var current_health: int:
 var _alive:bool = true
 var input_dir : Vector2
 
+var sprite: Node2D#AnimatedSprite2D
+
 @export var effects: Array[Effect]:
 	set(value):
 		if effects != value:
@@ -71,10 +73,19 @@ func movement(delta: float) -> void:
 func inflict_damage(object:Node2D, value:int) -> void:
 	if (!_alive): return
 	current_health -= value
-	print('Emitting health change')
+	_indicate_damage()
 	if (current_health <= 0):
 		_just_died()
 		return
+
+func _indicate_damage() -> void:
+	if (!sprite):
+		print('No sprite set!')
+		return
+
+	var tween = create_tween()
+	sprite.modulate = Color(0.608, 0.478, 1.0, 0.5)
+	tween.tween_property(sprite, "modulate", Color.WHITE, 0.30)
 
 func _just_died():
 	_alive = false

@@ -14,6 +14,7 @@ extends Entity
 @export var player: Player
 
 @export var drop_pod_scene: PackedScene
+@export var broken_tower_scene: PackedScene
 
 var timer: Timer
 var living_enemies: Array[BaseEnemy]
@@ -86,5 +87,8 @@ func movement(delta: float) -> void:
 	return
 
 func _handle_death():
+	var instance := broken_tower_scene.instantiate() as Node2D
+	instance.global_position = global_position
+	get_parent().add_child(instance)
 	destruction.emit(self)
 	queue_free()
