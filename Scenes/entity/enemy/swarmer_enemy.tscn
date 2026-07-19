@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n3rm4h2yi6xq"]
 
-[ext_resource type="PackedScene" uid="uid://ddl3jmeul8ca" path="res://Scenes/base_enemy.tscn" id="1_4xa7c"]
-[ext_resource type="Script" uid="uid://doi8o7dnmi4hh" path="res://Scripts/swarmer_enemy.gd" id="1_12on1"]
+[ext_resource type="PackedScene" uid="uid://ddl3jmeul8ca" path="res://Scenes/entity/enemy/base_enemy.tscn" id="1_4xa7c"]
+[ext_resource type="Script" uid="uid://doi8o7dnmi4hh" path="res://Scripts/entity/enemy/swarmer_enemy.gd" id="1_12on1"]
 [ext_resource type="Texture2D" uid="uid://ce8hg0d28vsbi" path="res://Assets/Circle.png" id="1_dcj1e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wsate"]

@@ -8,6 +8,6 @@ func _ready() -> void:
 
 func _select_katana_player():
 	SelectedKatanaPlayer.emit()
-	
+
 func _select_sniper_player():
 	SelectedSniperPlayer.emit()

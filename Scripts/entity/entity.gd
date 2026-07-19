@@ -4,6 +4,8 @@ class_name Entity
 const DEFAULT_SPEED: float = 10000.0
 const DEFAULT_MAX_HEALTH: int = 100
 
+var sprite: Sprite2D
+var animated_sprite: AnimatedSprite2D
 
 var current_speed: float
 
@@ -11,12 +13,25 @@ signal health_change(current_health:int)
 signal max_health_change(current_max_health:int)
 var current_max_health: int:
 	set(nv):
-		current_max_health = nv
-		max_health_change.emit(nv)
+		if current_health != nv:
+			current_max_health = nv
+			max_health_change.emit(nv)
 var current_health: int:
 	set(nv):
-		current_health = nv
-		health_change.emit(nv)
+		if current_health != nv:
+			if current_health > nv:
+				if sprite:
+					sprite.modulate = Color.RED
+					await get_tree().create_timer(0.1).timeout
+					sprite.modulate = Color.WHITE
+				elif animated_sprite:
+					animated_sprite.modulate = Color.RED
+					await get_tree().create_timer(0.1).timeout
+					animated_sprite.modulate = Color.WHITE
+			
+			
+			current_health = nv
+			health_change.emit(nv)
 
 var _alive:bool = true
 var input_dir : Vector2
@@ -33,6 +48,11 @@ func _ready() -> void:
 	current_speed = DEFAULT_SPEED
 	current_max_health = DEFAULT_MAX_HEALTH
 	current_health = DEFAULT_MAX_HEALTH
+	
+	if not find_children("", "Sprite2D").is_empty():
+		sprite = find_children("", "Sprite2D")[0]
+	elif not find_children("", "AnimatedSprite2D").is_empty():
+		animated_sprite = find_children("", "AnimatedSprite2D")[0]
 
 func _caculate_current_stats():
 	for effect in effects:

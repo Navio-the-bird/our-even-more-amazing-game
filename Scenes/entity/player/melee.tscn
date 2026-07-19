@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://cc3ldcq4uqlci"]
 
 [ext_resource type="Texture2D" uid="uid://c8bvw7swbtc7j" path="res://Assets/2026_07_17_0w7_Kleki(1)(1).png" id="1_5et7s"]
-[ext_resource type="Script" uid="uid://dma827p46xupg" path="res://Scenes/melee.gd" id="1_cc3h0"]
+[ext_resource type="Script" uid="uid://dma827p46xupg" path="res://Scenes/entity/player/melee.gd" id="1_cc3h0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pyt4d"]
-radius = 218.65955
+radius = 437.32
 
 [node name="Melee" type="Node2D" unique_id=1366463878]
 script = ExtResource("1_cc3h0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1635692152]
+scale = Vector2(2, 2)
 texture = ExtResource("1_5et7s")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1286064134]

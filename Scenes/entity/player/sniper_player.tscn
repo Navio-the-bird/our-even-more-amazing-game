@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://5kfgct5q1wio"]
 
-[ext_resource type="Script" uid="uid://bmu5evxgigp6t" path="res://Scripts/sniper_player.gd" id="1_dn5mc"]
+[ext_resource type="Script" uid="uid://bmu5evxgigp6t" path="res://Scripts/entity/player/sniper_player.gd" id="1_dn5mc"]
 [ext_resource type="Texture2D" uid="uid://c3xpexv0yxa3" path="res://Assets/IMG_0055.jpeg" id="1_ndy3m"]
-[ext_resource type="PackedScene" uid="uid://cyy0b4ib1522f" path="res://Scenes/sniper_bullet.tscn" id="2_w1354"]
+[ext_resource type="PackedScene" uid="uid://cyy0b4ib1522f" path="res://Scenes/entity/player/sniper_bullet.tscn" id="2_w1354"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssmoh"]
 radius = 40.0
