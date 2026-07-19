@@ -4,9 +4,6 @@ class_name Entity
 const DEFAULT_SPEED: float = 10000.0
 const DEFAULT_MAX_HEALTH: int = 100
 
-var sprite: Sprite2D
-var animated_sprite: AnimatedSprite2D
-
 var current_speed: float
 
 signal health_change(current_health:int)
@@ -19,17 +16,6 @@ var current_max_health: int:
 var current_health: int:
 	set(nv):
 		if current_health != nv:
-			if current_health > nv:
-				if sprite:
-					sprite.modulate = Color.RED
-					await get_tree().create_timer(0.1).timeout
-					sprite.modulate = Color.WHITE
-				elif animated_sprite:
-					animated_sprite.modulate = Color.RED
-					await get_tree().create_timer(0.1).timeout
-					animated_sprite.modulate = Color.WHITE
-			
-			
 			current_health = nv
 			health_change.emit(nv)
 
@@ -49,10 +35,11 @@ func _ready() -> void:
 	current_max_health = DEFAULT_MAX_HEALTH
 	current_health = DEFAULT_MAX_HEALTH
 	
-	if not find_children("", "Sprite2D").is_empty():
-		sprite = find_children("", "Sprite2D")[0]
-	elif not find_children("", "AnimatedSprite2D").is_empty():
-		animated_sprite = find_children("", "AnimatedSprite2D")[0]
+	if (!sprite):
+		if not find_children("", "Sprite2D").is_empty():
+			sprite = find_children("", "Sprite2D")[0]
+		elif not find_children("", "AnimatedSprite2D").is_empty():
+			sprite = find_children("", "AnimatedSprite2D")[0]
 
 func _caculate_current_stats():
 	for effect in effects:
@@ -104,7 +91,7 @@ func _indicate_damage() -> void:
 		return
 
 	var tween = create_tween()
-	sprite.modulate = Color(0.608, 0.478, 1.0, 0.5)
+	sprite.modulate = Color(0.912, 0.0, 0.121, 0.502)
 	tween.tween_property(sprite, "modulate", Color.WHITE, 0.30)
 
 func _just_died():
