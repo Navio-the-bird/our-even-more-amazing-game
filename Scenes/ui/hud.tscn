@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://wcm8fssonn3x"]
+
+[ext_resource type="Script" uid="uid://t2k2ps4btsuo" path="res://Scenes/ui/hud.gd" id="1_ateb2"]
+[ext_resource type="FontFile" uid="uid://dvfb4u6y6te66" path="res://Assets/Black_Ops_One Font/BlackOpsOne-Regular.ttf" id="2_8ercd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ateb2"]
+bg_color = Color(1, 0.10980392, 0.07450981, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id="Theme_ssmoh"]
+default_font = ExtResource("2_8ercd")
+default_font_size = 53
+
+[node name="Hud" type="Control" unique_id=1138256287]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ateb2")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=930010243]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 619.0
+offset_bottom = 60.0
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxFlat_ateb2")
+value = 96.0
+show_percentage = false
+
+[node name="TowerCount" type="Label" parent="." unique_id=708587632]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = -110.0
+offset_right = 426.0
+offset_bottom = -40.0
+grow_vertical = 0
+theme = SubResource("Theme_ssmoh")
+text = "towers"
+vertical_alignment = 1

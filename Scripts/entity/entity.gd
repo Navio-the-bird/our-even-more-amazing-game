@@ -6,12 +6,20 @@ const DEFAULT_MAX_HEALTH: int = 100
 
 
 var current_speed: float
-var current_max_health: int
-var current_health: int
+
+signal health_change(current_health:int)
+signal max_health_change(current_max_health:int)
+var current_max_health: int:
+	set(nv):
+		current_max_health = nv
+		max_health_change.emit(nv)
+var current_health: int:
+	set(nv):
+		current_health = nv
+		health_change.emit(nv)
 
 var _alive:bool = true
 var input_dir : Vector2
-
 
 @export var effects: Array[Effect]:
 	set(value):
@@ -63,6 +71,7 @@ func movement(delta: float) -> void:
 func inflict_damage(object:Node2D, value:int) -> void:
 	if (!_alive): return
 	current_health -= value
+	print('Emitting health change')
 	if (current_health <= 0):
 		_just_died()
 		return

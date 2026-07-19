@@ -19,6 +19,9 @@ var timer: Timer
 var living_enemies: Array[BaseEnemy]
 var _viewport_height:float
 
+#Signal for when the tower gets destroyed. I realise we could consolidate every death signal into the entity class but we're pretty damn short on time >v<
+signal destruction(object_ref:EnemyTower)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_viewport_height = get_viewport_rect().size.y / get_canvas_transform().get_scale().y
@@ -81,3 +84,7 @@ func _enemy_died(instance:BaseEnemy) -> void:
 
 func movement(delta: float) -> void:
 	return
+
+func _handle_death():
+	destruction.emit(self)
+	queue_free()

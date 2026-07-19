@@ -23,9 +23,11 @@ var camera:Camera2D
 
 var player:Player
 
+var active_enemy_towers: Array[EnemyTower]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	active_enemy_towers = []
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -48,9 +50,14 @@ func _clear_combat():
 	
 func _on_pause_menu_quit_game() -> void:
 	_clear_combat()
+	%Hud.hide()
 	%PauseMenu.hide()
 	%PlayerSelect.show()
 
+func _on_tower_destroy(obj:EnemyTower):
+	active_enemy_towers.erase(obj)
+	%Hud.set_tower_count(len(active_enemy_towers))
+	pass
 
 func _start_combat():
 	#First take out the trash
@@ -61,15 +68,23 @@ func _start_combat():
 	for i in range(TOWER_AMT):
 		config_array.push_back(_get_random_tower_config())
 	
+	active_enemy_towers = []
 	spawn_a_shitload_of_towers(config_array, %CombatContainer, %CombatContainer )
 	
 	camera = Camera2D.new()
 	camera.zoom = Vector2(0.2, 0.2)
 	camera.make_current()
+	
+	print('Setting max health,  health: ', player.current_max_health, '  ', player.current_health)
+	#%Hud.max_player_health = player.current_max_health
+	#%Hud.current_player_health = player.current_health
+	player.health_change.connect(%Hud.set_player_health)
+	player.max_health_change.connect(%Hud.set_player_max_health)
 	player.attack_spawn_node = %CombatContainer
 	player.add_child(camera)
 	%CombatContainer.add_child(player)
 	%PlayerSelect.hide()
+	%Hud.show()
 
 func _get_random_tower_config():
 	var tc := EnemyTowerConfig.new()
@@ -143,6 +158,8 @@ func spawn_a_shitload_of_towers(
 		)
 		
 		tower_holder.add_child(tower)
+		active_enemy_towers.push_back(tower)
+		tower.destruction.connect(_on_tower_destroy)
 		current_towers.append(tower.global_position)
 
 

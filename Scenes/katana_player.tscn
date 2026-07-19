@@ -9,6 +9,7 @@ radius = 125.0
 height = 606.0
 
 [node name="KatanaPlayer" type="CharacterBody2D" unique_id=1935757087]
+collision_layer = 2
 script = ExtResource("1_noi1j")
 melee_attack = ExtResource("2_6boay")
 
