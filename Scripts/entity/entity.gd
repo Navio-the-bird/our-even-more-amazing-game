@@ -31,9 +31,11 @@ var sprite: Node2D#AnimatedSprite2D
 			_caculate_current_stats()
 
 func _ready() -> void:
-	current_speed = DEFAULT_SPEED
-	current_max_health = DEFAULT_MAX_HEALTH
-	current_health = DEFAULT_MAX_HEALTH
+	if (!current_speed):
+		current_speed = DEFAULT_SPEED
+	if (!current_max_health):
+		current_max_health = DEFAULT_MAX_HEALTH
+	current_health = current_max_health
 	
 	if (!sprite):
 		if not find_children("", "Sprite2D").is_empty():

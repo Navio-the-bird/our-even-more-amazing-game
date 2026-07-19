@@ -33,6 +33,7 @@ danger_weight = 2
 metadata/_custom_type_script = "uid://7alnsavttjx0"
 
 [node name="CombatScene" type="Node2D" unique_id=365978540 node_paths=PackedStringArray("player", "pause_menu")]
+visible = false
 script = ExtResource("1_cy4jt")
 player = NodePath("SniperPlayer")
 pause_menu = NodePath("CanvasLayer/PauseMenu")

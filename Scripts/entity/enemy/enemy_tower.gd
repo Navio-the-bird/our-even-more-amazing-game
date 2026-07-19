@@ -27,7 +27,7 @@ signal destruction(object_ref:EnemyTower)
 func _ready() -> void:
 	_viewport_height = get_viewport_rect().size.y / get_canvas_transform().get_scale().y
 	timer = %SpawnTimer
-	current_max_health = 5000
+	current_max_health = 1200
 	timer.timeout.connect(_try_spawn)
 	_set_timer_rand()
 	super._ready()

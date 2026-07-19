@@ -2,28 +2,91 @@
 
 [ext_resource type="Script" uid="uid://bmgpnvqnio4in" path="res://Scripts/entity/enemy/enemy_tower.gd" id="1_jmy6o"]
 [ext_resource type="Script" uid="uid://d5m5wt4pwng7" path="res://Scripts/entity/tower/enemy_tower_config.gd" id="2_drsoa"]
-[ext_resource type="Texture2D" uid="uid://1ai6rxhnmrn6" path="res://Assets/2026_04_25_0x9_Kleki.png" id="2_khwy5"]
 [ext_resource type="PackedScene" uid="uid://cu7ywplchx2qh" path="res://Scenes/broken_tower.tscn" id="3_wysaq"]
+[ext_resource type="Texture2D" uid="uid://dr7pme1qv4tou" path="res://Assets/Signal Tower/Signal Tower.png" id="5_dlxwg"]
 
 [sub_resource type="Resource" id="Resource_w1354"]
 script = ExtResource("2_drsoa")
 metadata/_custom_type_script = "uid://d5m5wt4pwng7"
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssmoh"]
-size = Vector2(418, 1198)
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqu2f"]
+atlas = ExtResource("5_dlxwg")
+region = Rect2(0, 0, 2602, 4169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuplc"]
+atlas = ExtResource("5_dlxwg")
+region = Rect2(2602, 0, 2602, 4169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g45rr"]
+atlas = ExtResource("5_dlxwg")
+region = Rect2(5204, 0, 2602, 4169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fw7r7"]
+atlas = ExtResource("5_dlxwg")
+region = Rect2(0, 4169, 2602, 4169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi5hf"]
+atlas = ExtResource("5_dlxwg")
+region = Rect2(2602, 4169, 2602, 4169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfepq"]
+atlas = ExtResource("5_dlxwg")
+region = Rect2(5204, 4169, 2602, 4169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w87ah"]
+atlas = ExtResource("5_dlxwg")
+region = Rect2(7806, 4169, 2602, 4169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hostf"]
+atlas = ExtResource("5_dlxwg")
+region = Rect2(7806, 0, 2602, 4169)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ssmoh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqu2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuplc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g45rr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fw7r7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi5hf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfepq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w87ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hostf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 16.0
+}]
 
 [node name="EnemyTower" type="CharacterBody2D" unique_id=539932286 groups=["attackable"]]
 script = ExtResource("1_jmy6o")
 config = SubResource("Resource_w1354")
 broken_tower_scene = ExtResource("3_wysaq")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=447109769 groups=["attackable"]]
-scale = Vector2(0.46109512, 0.8902077)
-texture = ExtResource("2_khwy5")
-
 [node name="SpawnTimer" type="Timer" parent="." unique_id=123809344]
 unique_name_in_owner = true
 one_shot = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1695080134]
-shape = SubResource("RectangleShape2D_ssmoh")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1477856303]
+scale = Vector2(0.43889317, 0.3952987)
+sprite_frames = SubResource("SpriteFrames_ssmoh")
+autoplay = "default"
+frame_progress = 0.2607717
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1610079396]
+polygon = PackedVector2Array(-361, 475, -238, 94, -67, -142, -65, -276, 7, -400, 110, -207, 113, -131, 300, 100, 399, 446)
