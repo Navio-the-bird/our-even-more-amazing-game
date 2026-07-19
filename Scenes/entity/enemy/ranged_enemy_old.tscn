@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bfxlehfuvce6i"]
 
-[ext_resource type="Script" uid="uid://bi8qfirrbosjc" path="res://Scripts/ranged_enemy.gd" id="1_msnv5"]
+[ext_resource type="Script" uid="uid://bi8qfirrbosjc" path="res://Scripts/entity/enemy/ranged_enemy.gd" id="1_msnv5"]
 [ext_resource type="Texture2D" uid="uid://bsl5nod1lq4px" path="res://Assets/IMG_0294.jpeg" id="2_5x7gc"]
-[ext_resource type="PackedScene" uid="uid://cyy0b4ib1522f" path="res://Scenes/sniper_bullet.tscn" id="2_pubb5"]
+[ext_resource type="PackedScene" uid="uid://cyy0b4ib1522f" path="res://Scenes/entity/player/sniper_bullet.tscn" id="2_pubb5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssmoh"]
 

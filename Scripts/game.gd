@@ -73,6 +73,7 @@ func _start_combat():
 	
 	camera = Camera2D.new()
 	camera.zoom = Vector2(0.2, 0.2)
+	camera.position_smoothing_enabled = true
 	camera.make_current()
 	
 	print('Setting max health,  health: ', player.current_max_health, '  ', player.current_health)

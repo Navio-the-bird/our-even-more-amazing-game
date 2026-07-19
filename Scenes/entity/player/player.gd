@@ -7,6 +7,8 @@ extends Entity
 
 #Needs to be set by child class
 var projectile_scene: PackedScene
+var attack_cooldown: float = 0.15
+var can_attack: bool = true
 
 const SPEEDX: float = 800.0
 const SPEEDY: float = 700.0
@@ -23,8 +25,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if (!_alive): return
 	super._physics_process(delta)
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_pressed("attack") and can_attack:
 		attack()
+		can_attack = false
+		await get_tree().create_timer(attack_cooldown).timeout
+		can_attack = true
 	
 func attack() -> void:
 	if (!projectile_scene):

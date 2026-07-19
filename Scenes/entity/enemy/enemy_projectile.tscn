@@ -1,18 +1,17 @@
 [gd_scene format=3 uid="uid://wwk1bht5ds86"]
 
-[ext_resource type="Script" uid="uid://b8dwmppac5gtu" path="res://Scripts/enemy_projectile.gd" id="1_33pam"]
+[ext_resource type="Script" uid="uid://b8dwmppac5gtu" path="res://Scripts/entity/enemy/enemy_projectile.gd" id="1_33pam"]
 [ext_resource type="Texture2D" uid="uid://r1vwiana5vf4" path="res://Assets/enemy_projectile.png" id="2_ibebl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssmoh"]
-radius = 21.0
-height = 98.0
+radius = 40.0
+height = 180.0
 
 [node name="Enemy Projectile" type="Node2D" unique_id=930170889]
 script = ExtResource("1_33pam")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1372802355]
 position = Vector2(0, 1)
-scale = Vector2(0.375, 0.375)
 texture = ExtResource("2_ibebl")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=244822405]

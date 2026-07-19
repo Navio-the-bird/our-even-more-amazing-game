@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bocxbu1evoirn"]
 
-[ext_resource type="Script" uid="uid://cplnmckcii4kh" path="res://Scripts/katana_player.gd" id="1_noi1j"]
-[ext_resource type="PackedScene" uid="uid://cc3ldcq4uqlci" path="res://Scenes/melee.tscn" id="2_6boay"]
+[ext_resource type="Script" uid="uid://cplnmckcii4kh" path="res://Scripts/entity/player/katana_player.gd" id="1_noi1j"]
+[ext_resource type="PackedScene" uid="uid://cc3ldcq4uqlci" path="res://Scenes/entity/player/melee.tscn" id="2_6boay"]
 [ext_resource type="Texture2D" uid="uid://bsl5nod1lq4px" path="res://Assets/IMG_0294.jpeg" id="2_fo68a"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssmoh"]

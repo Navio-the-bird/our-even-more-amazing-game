@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cyy0b4ib1522f"]
 
-[ext_resource type="Script" uid="uid://71o5kls3x4sj" path="res://Scripts/sniper_bullet.gd" id="1_hgwxb"]
+[ext_resource type="Script" uid="uid://71o5kls3x4sj" path="res://Scripts/entity/player/sniper_bullet.gd" id="1_hgwxb"]
 [ext_resource type="Texture2D" uid="uid://byi6mv0chmbbx" path="res://Assets/player_projectile.png" id="2_hgwxb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvcc5"]

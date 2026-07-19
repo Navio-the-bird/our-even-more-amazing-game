@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cbpmt4otlisnm"]
 
-[ext_resource type="PackedScene" uid="uid://ddl3jmeul8ca" path="res://Scenes/base_enemy.tscn" id="1_msnv5"]
-[ext_resource type="Script" uid="uid://bi8qfirrbosjc" path="res://Scripts/ranged_enemy.gd" id="2_5x7gc"]
-[ext_resource type="PackedScene" uid="uid://wwk1bht5ds86" path="res://Scenes/enemy_projectile.tscn" id="3_1qm41"]
+[ext_resource type="PackedScene" uid="uid://ddl3jmeul8ca" path="res://Scenes/entity/enemy/base_enemy.tscn" id="1_msnv5"]
+[ext_resource type="Script" uid="uid://bi8qfirrbosjc" path="res://Scripts/entity/enemy/ranged_enemy.gd" id="2_5x7gc"]
+[ext_resource type="PackedScene" uid="uid://wwk1bht5ds86" path="res://Scenes/entity/enemy/enemy_projectile.tscn" id="3_1qm41"]
 [ext_resource type="Texture2D" uid="uid://bsl5nod1lq4px" path="res://Assets/IMG_0294.jpeg" id="3_nqq2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03w70"]

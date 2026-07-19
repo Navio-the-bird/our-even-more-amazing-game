@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cablf7m0j5uvw"]
 
-[ext_resource type="Script" uid="uid://bmgpnvqnio4in" path="res://Scripts/enemy_tower.gd" id="1_jmy6o"]
-[ext_resource type="Script" uid="uid://d5m5wt4pwng7" path="res://Scripts/enemy_tower_config.gd" id="2_drsoa"]
+[ext_resource type="Script" uid="uid://bmgpnvqnio4in" path="res://Scripts/entity/enemy/enemy_tower.gd" id="1_jmy6o"]
+[ext_resource type="Script" uid="uid://d5m5wt4pwng7" path="res://Scripts/entity/tower/enemy_tower_config.gd" id="2_efmha"]
 [ext_resource type="Texture2D" uid="uid://1ai6rxhnmrn6" path="res://Assets/2026_04_25_0x9_Kleki.png" id="2_khwy5"]
 
 [sub_resource type="Resource" id="Resource_w1354"]
-script = ExtResource("2_drsoa")
+script = ExtResource("2_efmha")
 metadata/_custom_type_script = "uid://d5m5wt4pwng7"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssmoh"]
