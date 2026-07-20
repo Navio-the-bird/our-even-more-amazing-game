@@ -27,10 +27,16 @@ var player:Player
 
 var active_enemy_towers: Array[EnemyTower]
 
+var battle_track_player:CustomAudioStreamPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	active_enemy_towers = []
-	
+	if randf() < 0.5:
+		battle_track_player = %BattleTrack1
+	else:
+		battle_track_player = %BattleTrack2
+		
+	battle_track_player.play()
 	await get_tree().create_timer(1).timeout
 	%MainMenu/PlayerSelect.SelectedKatanaPlayer.connect(_select_player_katana)
 	%MainMenu/PlayerSelect.SelectedSniperPlayer.connect(_select_player_sniper)
@@ -69,8 +75,8 @@ func _on_tower_destroy(obj:EnemyTower):
 func _start_combat():
 	#First take out the trash
 	_clear_combat()
+	
 	player.death.connect(on_player_death)
-	print('Trying to start combat')
 	%CombatContainer.add_child(background.instantiate())
 	
 	
@@ -86,7 +92,6 @@ func _start_combat():
 	camera.position_smoothing_enabled = true
 	camera.make_current()
 	
-	print('Setting max health,  health: ', player.current_max_health, '  ', player.current_health)
 	#%Hud.max_player_health = player.current_max_health
 	#%Hud.current_player_health = player.current_health
 	player.health_change.connect(%Hud.set_player_health)
@@ -112,6 +117,7 @@ func _get_random_tower_config():
 
 
 func on_player_death():
+	#battle_track_player.stop_all()
 	%GameOverMenu.game_over()
 
 ###### Prootzel's tower generation below

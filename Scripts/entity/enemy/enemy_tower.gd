@@ -55,7 +55,6 @@ func _try_spawn() -> void:
 		return
 		
 	if (len(living_enemies) >= config.MAX_NUM_ENEMIES):
-		print("Enemy count saturated")
 		_set_timer_rand()
 		return
 		

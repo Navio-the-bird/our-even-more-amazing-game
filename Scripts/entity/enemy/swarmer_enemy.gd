@@ -17,7 +17,6 @@ func _ready() -> void:
 
 func attack() -> void:
 	_attacking = true
-	print('Playing?')
 	if attack_sfx_player:
 		attack_sfx_player.play()
 	player.inflict_damage(self, melee_damage)

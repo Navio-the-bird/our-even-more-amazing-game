@@ -14,11 +14,9 @@ func _process(delta: float) -> void:
 func _on_hit(body:Node2D):
 	if (body == creator): return
 	if (!(body.is_in_group('attackable'))):
-		print('Hit something solid!')
 		queue_free()
 		return
 		
-	print('Hit something that should get hurt >:>')
 	(body as Entity).inflict_damage(self, damage)
 	if (pierce == 0):
 		queue_free()

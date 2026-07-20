@@ -113,11 +113,9 @@ func delete_stream_player(stream_player : AudioStreamPlayer):
 func play():
 	var stream_player = initialise_stream_player()
 	add_child(stream_player)
-	print(stream_player)
 	currently_playing.append(stream_player)
 	stream_player.play()
 	stream_player.finished.connect(delete_stream_player.bind(stream_player))
-	print("Playing")
 	increment_index()
 
 ## Stops all currently playing sound files
