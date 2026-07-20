@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://poa0qgqqsdbe" path="res://Assets/main_menu/spash_screen/team_logo.png" id="4_1ggui"]
 [ext_resource type="Script" uid="uid://c16txj5nk5mqm" path="res://Scenes/ui/main_menu/animated_button.gd" id="4_3erb8"]
 [ext_resource type="FontFile" uid="uid://dvfb4u6y6te66" path="res://Assets/Black_Ops_One Font/BlackOpsOne-Regular.ttf" id="5_1rgip"]
+[ext_resource type="Texture2D" uid="uid://bf83lxi38p482" path="res://Assets/main_menu/character_selection/Dex.png" id="5_rfo86"]
+[ext_resource type="Texture2D" uid="uid://48gypvf44kut" path="res://Assets/main_menu/character_selection/Lex.png" id="7_875cn"]
 [ext_resource type="Texture2D" uid="uid://djvefd0nmme0i" path="res://Assets/main_menu/menu/menu logo.png" id="8_rfo86"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_875cn"]
@@ -105,7 +107,7 @@ shadow_size = 2
 shadow_offset = Vector2(4, 4)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ort52"]
-bg_color = Color(0, 0, 0, 0.627451)
+bg_color = Color(0, 0, 0, 0.7058824)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -155,14 +157,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 250
-theme_override_constants/margin_top = 200
-theme_override_constants/margin_right = 250
-theme_override_constants/margin_bottom = 200
+theme_override_constants/margin_left = 430
+theme_override_constants/margin_top = 220
+theme_override_constants/margin_right = 430
+theme_override_constants/margin_bottom = 180
 
 [node name="GridContainer" type="HBoxContainer" parent="PlayerSelect/CharacterMargin" unique_id=1481363172]
 layout_mode = 2
-theme_override_constants/separation = 250
+theme_override_constants/separation = 300
 alignment = 1
 
 [node name="KatanaPlayerSelect" type="Button" parent="PlayerSelect/CharacterMargin/GridContainer" unique_id=8299723]
@@ -184,11 +186,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-offset_transform_enabled = true
-offset_transform_position = Vector2(-386.68, -114.875)
-offset_transform_scale = Vector2(3.24, 3.24)
 mouse_filter = 2
-texture = ExtResource("2_5isg7")
+texture = ExtResource("5_rfo86")
 expand_mode = 3
 stretch_mode = 5
 
@@ -229,11 +228,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-offset_transform_enabled = true
-offset_transform_position = Vector2(-1050, 91.52)
-offset_transform_scale = Vector2(4, 4)
 mouse_filter = 2
-texture = ExtResource("2_5isg7")
+texture = ExtResource("7_875cn")
 expand_mode = 3
 stretch_mode = 5
 
@@ -430,20 +426,39 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 100
+theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 100
+theme_override_constants/margin_bottom = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Credits/MainMargin/Panel/ContentMargin" unique_id=143665911]
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits/MainMargin/Panel/ContentMargin" unique_id=1425793085]
 layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer" unique_id=1463745258]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_1rgip")
+theme_override_font_sizes/normal_font_size = 100
+text = "CREDITS"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer" unique_id=143665911]
+layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/separation = 100
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Credits/MainMargin/Panel/ContentMargin/HBoxContainer" unique_id=198179321]
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer/HBoxContainer" unique_id=198179321]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 20
 
-[node name="TextureRect" type="TextureRect" parent="Credits/MainMargin/Panel/ContentMargin/HBoxContainer/VBoxContainer" unique_id=1059497401]
+[node name="TextureRect" type="TextureRect" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1059497401]
 custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -451,11 +466,11 @@ texture = ExtResource("4_1ggui")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Credits/MainMargin/Panel/ContentMargin/HBoxContainer/VBoxContainer" unique_id=1415589382]
+[node name="HBoxContainer" type="HBoxContainer" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1415589382]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Credits/MainMargin/Panel/ContentMargin/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1395279967]
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1395279967]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_vertical = 3
@@ -475,7 +490,7 @@ SimcaChambord
 
 YumNothingSoup"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Credits/MainMargin/Panel/ContentMargin/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=559882279]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=559882279]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -490,17 +505,58 @@ Prootzel — Composer, Sound Designer, Programmer
 
 Artist, Character Designer
 
-Composer, Sound Designer, Concept Artist"
+Artist, Composer, Sound Designer, Concept Artist"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Credits/MainMargin/Panel/ContentMargin/HBoxContainer" unique_id=818615534]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer/HBoxContainer" unique_id=1269681058]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/bold_font = ExtResource("5_1rgip")
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=37961522]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/bold_italics_font = ExtResource("5_1rgip")
 theme_override_font_sizes/normal_font_size = 24
-theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 48
 bbcode_enabled = true
-text = "[b]Other Credits[/b]
-[Insert links to assets that we use]"
+text = "[b][i]Other Credits[/i][/b]"
+vertical_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1930021466]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=818615534]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/bold_italics_font = ExtResource("5_1rgip")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 48
+bbcode_enabled = true
+text = "[b]Kenney.nl
+
+[font_size={32}][i]On Pixabay:[/i][/font_size]
+Universfield
+Voicebosch
+Freesound community"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Credits/MainMargin/Panel/ContentMargin/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer" unique_id=1269579064]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "UI Sounds, Hit Sounds
+
+[font_size={32}] [/font_size]
+Katana sounds
+Laser sounds
+Walking sounds"
 
 [node name="BackButtonMargin" type="MarginContainer" parent="Credits" unique_id=1412626807]
 layout_mode = 1
