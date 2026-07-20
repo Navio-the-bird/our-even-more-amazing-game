@@ -753,6 +753,7 @@ pitch_variation = 0.2
 audio_streams = Array[AudioStream]([ExtResource("15_7po51")])
 metadata/_custom_type_script = "uid://cphg5o30fv4pc"
 
-[node name="WalkSound" type="AudioStreamPlayer" parent="." unique_id=79116707]
-stream = ExtResource("16_7po51")
-volume_db = 8.515
+[node name="WalkSound" type="Node3D" parent="." unique_id=487225317]
+script = ExtResource("14_f1cek")
+audio_streams = Array[AudioStream]([ExtResource("16_7po51")])
+metadata/_custom_type_script = "uid://cphg5o30fv4pc"

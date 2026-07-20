@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://nou4xipir65j" path="res://Scripts/drop_pod.gd" id="1_g1tw0"]
 [ext_resource type="Texture2D" uid="uid://cucchgjevou0c" path="res://Assets/enemy_pod1.png" id="3_5d1q2"]
+[ext_resource type="Script" uid="uid://cphg5o30fv4pc" path="res://Scripts/CustomAudioStreamPlayer.gd" id="4_5d1q2"]
 [ext_resource type="Texture2D" uid="uid://bqlkk2kc7ddam" path="res://Assets/enemy_pod2.png" id="4_tjfhu"]
+[ext_resource type="AudioStream" uid="uid://drl13he507jn1" path="res://Assets/SFX/spaceship descending option2.mp3" id="5_tjfhu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssmoh"]
 size = Vector2(362, 380)
@@ -36,3 +38,10 @@ scale = Vector2(0.46114647, 0.44298244)
 sprite_frames = SubResource("SpriteFrames_ssmoh")
 autoplay = "default"
 frame_progress = 0.33638424
+
+[node name="MoveSound" type="Node3D" parent="." unique_id=130033435]
+script = ExtResource("4_5d1q2")
+base_volume = -6.013
+pitch_variation = 0.2
+audio_streams = Array[AudioStream]([ExtResource("5_tjfhu")])
+metadata/_custom_type_script = "uid://cphg5o30fv4pc"

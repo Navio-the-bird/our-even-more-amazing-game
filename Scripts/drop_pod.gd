@@ -13,8 +13,11 @@ var _dropped := false
 var _opened := false
 const threshold: float = 1 #The threshold at which to decide we've reached our destination
 
+@onready
+var move_sound_sfx_player :CustomAudioStreamPlayer = $MoveSound
+
 func _ready() -> void:
-	pass
+	move_sound_sfx_player.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -30,6 +33,7 @@ func _process(delta: float) -> void:
 
 func _on_open() -> void:
 	if (_opened): return
+	move_sound_sfx_player.stop_all()
 	#Spawn here
 	enemy.global_position = global_position
 	var parent := get_parent()

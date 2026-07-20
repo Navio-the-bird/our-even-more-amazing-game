@@ -2,6 +2,8 @@ class_name RangedEnemy
 extends BaseEnemy
 
 @export var projectile_scene:PackedScene
+@onready
+var attack_sfx_player:CustomAudioStreamPlayer = $AttackSound
 
 func _ready() -> void:
 	attack_distance = 2500 #Distance at which the enemy starts firing
@@ -14,6 +16,7 @@ func _ready() -> void:
 
 func attack() -> void:
 	_attacking = true
+	attack_sfx_player.play()
 	const offset := 10
 	var base_dir := get_player_direction()
 	var dir := base_dir.normalized()

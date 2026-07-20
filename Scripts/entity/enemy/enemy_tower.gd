@@ -64,7 +64,6 @@ func _try_spawn() -> void:
 	
 	#Chuck it into the scene with a pod
 	var spawn_offset := Vector2(0,  10000)
-	print('Offset: ', spawn_offset)
 	var pod_instance := drop_pod_scene.instantiate() as DropPod
 	pod_instance.destination = _get_random_enemy_spawn()
 	pod_instance.global_position = pod_instance.destination - spawn_offset

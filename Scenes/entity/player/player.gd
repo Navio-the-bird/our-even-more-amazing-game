@@ -23,7 +23,9 @@ var player_death_animation_played:bool = false
 var attack_sfx_player:= $AttackSound
 
 @onready
-var walk_sfx_player: AudioStreamPlayer = $WalkSound
+var walk_sfx_player: CustomAudioStreamPlayer = $WalkSound
+
+var playing_walking_sound:bool = false
 
 func _ready() -> void:
 	current_speed = 3000
@@ -31,10 +33,11 @@ func _ready() -> void:
 	current_health = current_max_health
 
 func _physics_process(delta: float) -> void:
-	if (velocity.length() > 0 && !walk_sfx_player.playing):
-		walk_sfx_player.play()
-	else:
-		walk_sfx_player.stop()
+	if (velocity.length() > 1):
+		if (!walk_sfx_player.currently_playing):
+			walk_sfx_player.play()
+	elif walk_sfx_player.currently_playing:
+		walk_sfx_player.stop_all()
 		
 	if (!_alive): return
 	super._physics_process(delta)

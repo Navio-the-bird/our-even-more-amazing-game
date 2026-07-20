@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c4gxutvk0kni7" path="res://Assets/r_e_idle_1.png" id="4_bvp7b"]
 [ext_resource type="Texture2D" uid="uid://chemrxpfgt85c" path="res://Assets/r_e_idle_2.png" id="5_lcaim"]
 [ext_resource type="Texture2D" uid="uid://c1ft5bek38fy8" path="res://Assets/r_e_idle_3.png" id="6_pbmq5"]
+[ext_resource type="Script" uid="uid://cphg5o30fv4pc" path="res://Scripts/CustomAudioStreamPlayer.gd" id="7_haeg2"]
+[ext_resource type="AudioStream" uid="uid://lmnurk48peqp" path="res://Assets/SFX/Enemies shot.mp3" id="8_m1h8n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03w70"]
 size = Vector2(244, 386)
@@ -40,3 +42,10 @@ sprite_frames = SubResource("SpriteFrames_ssmoh")
 autoplay = "default"
 frame = 2
 frame_progress = 0.8837519
+
+[node name="AttackSound" type="Node3D" parent="." index="3" unique_id=217658937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+script = ExtResource("7_haeg2")
+base_volume = -0.05000000000000071
+audio_streams = Array[AudioStream]([ExtResource("8_m1h8n")])
+metadata/_custom_type_script = "uid://cphg5o30fv4pc"

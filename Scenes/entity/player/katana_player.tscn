@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://byvwiqkvjpky4" path="res://Assets/DEX/DEXfront run.png" id="5_n7q5w"]
 [ext_resource type="Texture2D" uid="uid://uy3clawomad6" path="res://Assets/DEX/DEXside L.png" id="7_rcrif"]
 [ext_resource type="Texture2D" uid="uid://dwnj7yxjayqm1" path="res://Assets/DEX/DEXside R.png" id="8_fhgj3"]
+[ext_resource type="Script" uid="uid://cphg5o30fv4pc" path="res://Scripts/CustomAudioStreamPlayer.gd" id="10_1q4hf"]
+[ext_resource type="AudioStream" uid="uid://yslm5hmrl5ks" path="res://Assets/SFX/DEX saber swing.mp3" id="12_85ofi"]
+[ext_resource type="AudioStream" uid="uid://tkaibrdcjmix" path="res://Assets/SFX/DEX LEX run on grass.mp3" id="12_s6lp5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ssmoh"]
 radius = 125.0
@@ -483,7 +486,6 @@ animations = [{
 collision_layer = 2
 script = ExtResource("1_noi1j")
 melee_attack = ExtResource("2_6boay")
-effects = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944545367]
 shape = SubResource("CapsuleShape2D_ssmoh")
@@ -492,7 +494,18 @@ shape = SubResource("CapsuleShape2D_ssmoh")
 position = Vector2(-40.999996, -75)
 scale = Vector2(0.33897, 0.33341327)
 sprite_frames = SubResource("SpriteFrames_ssmoh")
-animation = &"die"
+animation = &"attack"
 autoplay = "idle"
-frame = 3
-frame_progress = 0.4978886
+
+[node name="AttackSound" type="Node3D" parent="." unique_id=797312782]
+script = ExtResource("10_1q4hf")
+base_volume = -5.35
+base_pitch = 1.1360000000000001
+pitch_variation = 0.2
+audio_streams = Array[AudioStream]([ExtResource("12_85ofi")])
+metadata/_custom_type_script = "uid://cphg5o30fv4pc"
+
+[node name="WalkSound" type="Node3D" parent="." unique_id=2022715705]
+script = ExtResource("10_1q4hf")
+audio_streams = Array[AudioStream]([ExtResource("12_s6lp5")])
+metadata/_custom_type_script = "uid://cphg5o30fv4pc"

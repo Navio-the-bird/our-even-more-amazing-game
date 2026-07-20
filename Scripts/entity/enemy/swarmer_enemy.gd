@@ -4,6 +4,9 @@ extends BaseEnemy
 @export var melee_attack_scene:PackedScene
 const melee_damage := 5
 
+@onready
+var attack_sfx_player:CustomAudioStreamPlayer = $AttackSound
+
 func _ready() -> void:
 	acceleration = 800
 	_cooldown = 0.5
@@ -14,5 +17,7 @@ func _ready() -> void:
 
 func attack() -> void:
 	_attacking = true
+	print('Playing?')
+	attack_sfx_player.play()
 	player.inflict_damage(self, melee_damage)
 	_attacking = false
