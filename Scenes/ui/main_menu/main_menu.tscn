@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dofxqn7i17i6"]
 
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_jo6yo"]
 [ext_resource type="Script" uid="uid://helywf6oy6cl" path="res://Scenes/ui/main_menu/main_menu.gd" id="1_ort52"]
+[ext_resource type="Texture2D" uid="uid://tmjk7oare5rf" path="res://Assets/main_menu/menu/menu back.png" id="2_5isg7"]
 [ext_resource type="Script" uid="uid://beo8xyvuxd0km" path="res://Scenes/ui/player_select.gd" id="2_ort52"]
 [ext_resource type="Script" uid="uid://ia0hp01chlte" path="res://Scenes/ui/main_menu/character_select_button.gd" id="3_3xdky"]
 [ext_resource type="Texture2D" uid="uid://poa0qgqqsdbe" path="res://Assets/main_menu/spash_screen/team_logo.png" id="4_1ggui"]
 [ext_resource type="Script" uid="uid://c16txj5nk5mqm" path="res://Scenes/ui/main_menu/animated_button.gd" id="4_3erb8"]
-[ext_resource type="Texture2D" uid="uid://bsl5nod1lq4px" path="res://Assets/IMG_0294.jpeg" id="4_rbwmf"]
 [ext_resource type="FontFile" uid="uid://dvfb4u6y6te66" path="res://Assets/Black_Ops_One Font/BlackOpsOne-Regular.ttf" id="5_1rgip"]
+[ext_resource type="Texture2D" uid="uid://djvefd0nmme0i" path="res://Assets/main_menu/menu/menu logo.png" id="8_rfo86"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_875cn"]
 
@@ -120,9 +120,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ort52")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1993272094]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5isg7")
+
 [node name="PlayerSelect" type="Control" parent="." unique_id=586804313]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -130,6 +138,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_ort52")
+
+[node name="ColorRect" type="ColorRect" parent="PlayerSelect" unique_id=1122816399]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7058824)
 
 [node name="CharacterMargin" type="MarginContainer" parent="PlayerSelect" unique_id=1229388840]
 layout_mode = 1
@@ -167,8 +184,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(-386.68, -114.875)
+offset_transform_scale = Vector2(3.24, 3.24)
 mouse_filter = 2
-texture = ExtResource("4_rbwmf")
+texture = ExtResource("2_5isg7")
 expand_mode = 3
 stretch_mode = 5
 
@@ -180,7 +200,7 @@ anchor_right = 1.0
 grow_horizontal = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 6
+theme_override_constants/outline_size = 8
 theme_override_fonts/bold_font = ExtResource("5_1rgip")
 theme_override_font_sizes/normal_font_size = 25
 theme_override_font_sizes/bold_font_size = 64
@@ -209,8 +229,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(-1050, 91.52)
+offset_transform_scale = Vector2(4, 4)
 mouse_filter = 2
-texture = ExtResource("4_rbwmf")
+texture = ExtResource("2_5isg7")
 expand_mode = 3
 stretch_mode = 5
 
@@ -222,7 +245,7 @@ anchor_right = 1.0
 grow_horizontal = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 6
+theme_override_constants/outline_size = 8
 theme_override_fonts/bold_font = ExtResource("5_1rgip")
 theme_override_font_sizes/normal_font_size = 25
 theme_override_font_sizes/bold_font_size = 64
@@ -279,6 +302,7 @@ vertical_alignment = 1
 
 [node name="Main" type="Control" parent="." unique_id=1541565617]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -293,19 +317,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 200
+theme_override_constants/margin_left = 250
 theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 1200
+theme_override_constants/margin_right = 1150
 theme_override_constants/margin_bottom = 200
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Main/MarginContainer" unique_id=354680767]
 layout_mode = 2
-theme_override_constants/separation = 40
+theme_override_constants/separation = 10
 
 [node name="TextureRect" type="TextureRect" parent="Main/MarginContainer/VBoxContainer" unique_id=2129852654]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("1_jo6yo")
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_rfo86")
+expand_mode = 5
+stretch_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Main/MarginContainer/VBoxContainer" unique_id=1038137939]
 layout_mode = 2
