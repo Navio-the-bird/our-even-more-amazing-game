@@ -18,6 +18,8 @@ const TOWER_POSITION_MAX_RADIUS = 20000
 @export var tower_scene:PackedScene
 @export var drop_pod_scene:PackedScene
 
+@export var background: PackedScene
+
 @export var possible_enemies : Array[EnemyInfo]
 var camera:Camera2D
 
@@ -68,6 +70,8 @@ func _start_combat():
 	#First take out the trash
 	_clear_combat()
 	print('Trying to start combat')
+	%CombatContainer.add_child(background.instantiate())
+	
 	
 	var config_array: Array[EnemyTowerConfig] = []
 	for i in range(TOWER_AMT):

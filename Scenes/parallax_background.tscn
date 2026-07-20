@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c6lg4p87hw1jd"]
+
+[ext_resource type="Texture2D" uid="uid://difa5opuyvtpi" path="res://Assets/background/bg.png" id="1_0fo66"]
+
+[node name="ParallaxBackground" type="Parallax2D" unique_id=105608464]
+repeat_size = Vector2(3840, 2160)
+repeat_times = 3
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=886671909]
+texture = ExtResource("1_0fo66")
+centered = false
