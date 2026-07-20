@@ -23,10 +23,15 @@ var _viewport_height:float
 #Signal for when the tower gets destroyed. I realise we could consolidate every death signal into the entity class but we're pretty damn short on time >v<
 signal destruction(object_ref:EnemyTower)
 
+func _on_audio_finished() -> void:
+	%IdleSound.play()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_viewport_height = get_viewport_rect().size.y / get_canvas_transform().get_scale().y
 	timer = %SpawnTimer
+	%IdleSound.finished.connect(self._on_audio_finished)
+	%IdleSound.play()
 	current_max_health = 1200
 	timer.timeout.connect(_try_spawn)
 	_set_timer_rand()

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d5m5wt4pwng7" path="res://Scripts/entity/tower/enemy_tower_config.gd" id="2_drsoa"]
 [ext_resource type="PackedScene" uid="uid://cu7ywplchx2qh" path="res://Scenes/broken_tower.tscn" id="3_wysaq"]
 [ext_resource type="Texture2D" uid="uid://dr7pme1qv4tou" path="res://Assets/Signal Tower/Signal Tower.png" id="5_dlxwg"]
+[ext_resource type="AudioStream" uid="uid://d3la1o3aca1sv" path="res://Assets/SFX/Tower signal emission.mp3" id="6_tuplc"]
 
 [sub_resource type="Resource" id="Resource_w1354"]
 script = ExtResource("2_drsoa")
@@ -90,3 +91,7 @@ frame_progress = 0.2607717
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1610079396]
 polygon = PackedVector2Array(-361, 475, -238, 94, -67, -142, -65, -276, 7, -400, 110, -207, 113, -131, 300, 100, 399, 446)
+
+[node name="IdleSound" type="AudioStreamPlayer2D" parent="." unique_id=1922104294]
+unique_name_in_owner = true
+stream = ExtResource("6_tuplc")

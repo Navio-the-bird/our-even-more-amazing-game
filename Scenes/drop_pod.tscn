@@ -41,7 +41,7 @@ frame_progress = 0.33638424
 
 [node name="MoveSound" type="Node3D" parent="." unique_id=130033435]
 script = ExtResource("4_5d1q2")
-base_volume = -6.013
+base_volume = -9.457
 pitch_variation = 0.2
 audio_streams = Array[AudioStream]([ExtResource("5_tjfhu")])
 metadata/_custom_type_script = "uid://cphg5o30fv4pc"

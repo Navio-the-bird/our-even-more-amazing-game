@@ -46,6 +46,7 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 
 [node name="GameOverMenu" parent="CanvasLayer" unique_id=1354776763 instance=ExtResource("13_rfjv2")]
+unique_name_in_owner = true
 
 [node name="MainMenu" parent="CanvasLayer" unique_id=1001957899 instance=ExtResource("10_rku1e")]
 unique_name_in_owner = true
@@ -55,4 +56,6 @@ unique_name_in_owner = true
 
 [node name="Splash Screen" parent="CanvasLayer" unique_id=344676566 instance=ExtResource("12_rku1e")]
 
+[connection signal="play_again" from="CanvasLayer/GameOverMenu" to="." method="_on_pause_menu_quit_game"]
+[connection signal="quit_game" from="CanvasLayer/GameOverMenu" to="." method="_on_pause_menu_quit_game"]
 [connection signal="quit_game" from="CanvasLayer/PauseMenu" to="." method="_on_pause_menu_quit_game"]

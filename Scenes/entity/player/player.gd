@@ -13,6 +13,8 @@ var can_attack: bool = true
 const SPEEDX: float = 800.0
 const SPEEDY: float = 700.0
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 var cooldown:float = 1
 
 signal player_attack
@@ -65,7 +67,12 @@ func attack() -> void:
 
 func _handle_death():
 	print('Player is dead!')
-	
+	#if (!player_death_animation_played):
+	attack_sfx_player.stop_all()
+	walk_sfx_player.stop_all()
+	animated_sprite_2d.play("die")
+	await animated_sprite_2d.animation_finished
+	player_death_animation_played = true
 	death.emit()
 	
 func _get_attack_direction() -> Vector2:

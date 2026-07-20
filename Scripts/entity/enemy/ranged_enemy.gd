@@ -3,7 +3,7 @@ extends BaseEnemy
 
 @export var projectile_scene:PackedScene
 @onready
-var attack_sfx_player:CustomAudioStreamPlayer = $AttackSound
+var attack_sfx_player:AudioStreamPlayer2D = $AttackSound
 
 func _ready() -> void:
 	attack_distance = 2500 #Distance at which the enemy starts firing
@@ -28,3 +28,6 @@ func attack() -> void:
 	projectile_spawn_node.add_child(instance)
 	_attacking = false #This should be in a callback after animation end
 	
+func _handle_death():
+	attack_sfx_player.stop()
+	super._handle_death()

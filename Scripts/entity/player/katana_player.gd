@@ -1,7 +1,7 @@
 extends Player
 
 @export var melee_attack:PackedScene
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 var is_attacking: bool = false
 
 func _ready() -> void:
@@ -16,9 +16,7 @@ func _process(delta: float) -> void:
 
 func _handle_animation():
 	if (!_alive):
-		if (!player_death_animation_played):
-			animated_sprite_2d.play("die")
-			player_death_animation_played = true
+		
 		return
 	if velocity == Vector2.ZERO:
 		animated_sprite_2d.play("idle")

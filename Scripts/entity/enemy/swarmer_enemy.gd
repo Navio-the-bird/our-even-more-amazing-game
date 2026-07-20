@@ -18,6 +18,12 @@ func _ready() -> void:
 func attack() -> void:
 	_attacking = true
 	print('Playing?')
-	attack_sfx_player.play()
+	if attack_sfx_player:
+		attack_sfx_player.play()
 	player.inflict_damage(self, melee_damage)
 	_attacking = false
+
+func _handle_death():
+	if attack_sfx_player:
+		attack_sfx_player.stop_all()
+	super._handle_death()

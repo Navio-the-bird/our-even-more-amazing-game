@@ -1,7 +1,7 @@
 extends Player
 
 @export var sniper_bullet:PackedScene
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+#@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 var is_attacking: bool = false
 
 func _ready() -> void:
@@ -13,6 +13,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not is_attacking:
 		_handle_animation()
+
+	
 
 func _handle_animation():
 	if (!_alive):

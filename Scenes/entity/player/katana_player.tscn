@@ -486,6 +486,7 @@ animations = [{
 collision_layer = 2
 script = ExtResource("1_noi1j")
 melee_attack = ExtResource("2_6boay")
+effects = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944545367]
 shape = SubResource("CapsuleShape2D_ssmoh")

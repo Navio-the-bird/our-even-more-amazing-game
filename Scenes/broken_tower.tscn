@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cu7ywplchx2qh"]
 
 [ext_resource type="Texture2D" uid="uid://dkj1xee5l4ga" path="res://Assets/broken_tower.png" id="1_ygi0b"]
+[ext_resource type="AudioStream" uid="uid://yaul00d0mj1b" path="res://Assets/SFX/Tower explosion.mp3" id="2_p3d34"]
 
 [node name="BrokenTower" type="StaticBody2D" unique_id=1981444856]
 
@@ -13,3 +14,8 @@ texture = ExtResource("1_ygi0b")
 position = Vector2(-20.795479, 279.79987)
 scale = Vector2(4.010028, 1.8825991)
 polygon = PackedVector2Array(-85.46085, 104.64931, -48.755375, -108.70741, -14.928756, -150.64932, 46.96676, -128.76659, 85.11167, -68.58905, 110.30171, 101.00218)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=200611335]
+stream = ExtResource("2_p3d34")
+volume_db = -1.824
+autoplay = true

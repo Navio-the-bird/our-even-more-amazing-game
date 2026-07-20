@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://xduuglo70ntt" path="res://Assets/swarmer_enemy1.png" id="3_36toy"]
 [ext_resource type="Texture2D" uid="uid://dbqi0ca7y6up3" path="res://Assets/swarmer_enemy2.png" id="4_pr2bv"]
 [ext_resource type="Texture2D" uid="uid://dhl3xu7pmfhi6" path="res://Assets/swarmer_enemy3.png" id="5_fnt1o"]
-[ext_resource type="Script" uid="uid://cphg5o30fv4pc" path="res://Scripts/CustomAudioStreamPlayer.gd" id="6_fnt1o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wsate"]
 radius = 117.273186
@@ -37,9 +36,3 @@ shape = SubResource("CircleShape2D_wsate")
 scale = Vector2(1.1714287, 1.1809524)
 sprite_frames = SubResource("SpriteFrames_sv7pb")
 autoplay = "default"
-
-[node name="AttackSound" type="Node3D" parent="." index="3" unique_id=1293682179]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0)
-script = ExtResource("6_fnt1o")
-base_volume = -0.05000000000000071
-metadata/_custom_type_script = "uid://cphg5o30fv4pc"

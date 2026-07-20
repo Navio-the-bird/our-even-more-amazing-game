@@ -69,6 +69,7 @@ func _on_tower_destroy(obj:EnemyTower):
 func _start_combat():
 	#First take out the trash
 	_clear_combat()
+	player.death.connect(on_player_death)
 	print('Trying to start combat')
 	%CombatContainer.add_child(background.instantiate())
 	
@@ -109,6 +110,9 @@ func _get_random_tower_config():
 	
 	return tc
 
+
+func on_player_death():
+	%GameOverMenu.game_over()
 
 ###### Prootzel's tower generation below
 
