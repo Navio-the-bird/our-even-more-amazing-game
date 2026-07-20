@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://5kfgct5q1wio" path="res://Scenes/entity/player/sniper_player.tscn" id="3_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://dldryoch2e8ju" path="res://Scenes/enemy_tower.tscn" id="4_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://bifl70eblpivq" path="res://Scenes/drop_pod.tscn" id="5_rku1e"]
+[ext_resource type="PackedScene" uid="uid://c6lg4p87hw1jd" path="res://Scenes/parallax_background.tscn" id="6_1phco"]
 [ext_resource type="Script" uid="uid://7alnsavttjx0" path="res://Scripts/entity/enemy/enemy_info.gd" id="6_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://n3rm4h2yi6xq" path="res://Scenes/entity/enemy/swarmer_enemy.tscn" id="7_1phco"]
 [ext_resource type="PackedScene" uid="uid://cbpmt4otlisnm" path="res://Scenes/entity/enemy/ranged_enemy.tscn" id="8_nb51f"]
@@ -12,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dofxqn7i17i6" path="res://Scenes/ui/main_menu/main_menu.tscn" id="10_rku1e"]
 [ext_resource type="PackedScene" uid="uid://wcm8fssonn3x" path="res://Scenes/ui/hud.tscn" id="11_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://kw3tnusl3jns" path="res://Scenes/ui/main_menu/splash_screen.tscn" id="12_rku1e"]
+[ext_resource type="PackedScene" uid="uid://br6qhevoqndc8" path="res://Scenes/ui/game_over_menu.tscn" id="13_rfjv2"]
 
 [sub_resource type="Resource" id="Resource_qxrlw"]
 script = ExtResource("6_rfjv2")
@@ -32,6 +34,7 @@ katana_player_scene = ExtResource("2_h4fw4")
 sniper_player_scene = ExtResource("3_ldgsr")
 tower_scene = ExtResource("4_o5yvi")
 drop_pod_scene = ExtResource("5_rku1e")
+background = ExtResource("6_1phco")
 possible_enemies = Array[ExtResource("6_rfjv2")]([SubResource("Resource_qxrlw"), SubResource("Resource_wrm1d")])
 
 [node name="CombatContainer" type="Node2D" parent="." unique_id=1632798665]
@@ -41,6 +44,8 @@ unique_name_in_owner = true
 
 [node name="Hud" parent="CanvasLayer" unique_id=1138256287 instance=ExtResource("11_o5yvi")]
 unique_name_in_owner = true
+
+[node name="GameOverMenu" parent="CanvasLayer" unique_id=1354776763 instance=ExtResource("13_rfjv2")]
 
 [node name="MainMenu" parent="CanvasLayer" unique_id=1001957899 instance=ExtResource("10_rku1e")]
 unique_name_in_owner = true
