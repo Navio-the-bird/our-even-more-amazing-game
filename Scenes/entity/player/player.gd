@@ -15,6 +15,7 @@ const SPEEDY: float = 700.0
 
 var cooldown:float = 1
 
+signal player_attack
 signal death
 
 func _ready() -> void:
@@ -44,6 +45,7 @@ func attack() -> void:
 	instance.global_position = global_position + dir*offset
 	instance.direction = target - global_position
 	attack_spawn_node.add_child(instance)
+	player_attack.emit()
 
 func _handle_death():
 	print('Player is dead!')

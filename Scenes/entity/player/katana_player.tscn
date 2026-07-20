@@ -246,7 +246,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_atbar")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attack",
 "speed": 16.0
 }, {
@@ -408,7 +408,5 @@ shape = SubResource("CapsuleShape2D_ssmoh")
 position = Vector2(-40.999996, -75)
 scale = Vector2(0.33897, 0.33341327)
 sprite_frames = SubResource("SpriteFrames_ssmoh")
-animation = &"side R"
+animation = &"attack"
 autoplay = "idle"
-frame = 5
-frame_progress = 0.14678451
