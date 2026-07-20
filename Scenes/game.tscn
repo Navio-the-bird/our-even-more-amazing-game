@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://jv5gempkmtvq" path="res://Scripts/game.gd" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://bocxbu1evoirn" path="res://Scenes/entity/player/katana_player.tscn" id="2_h4fw4"]
-[ext_resource type="PackedScene" uid="uid://c7aif247e37fw" path="res://Scenes/ui/PlayerSelect.tscn" id="2_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://5kfgct5q1wio" path="res://Scenes/entity/player/sniper_player.tscn" id="3_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://dldryoch2e8ju" path="res://Scenes/enemy_tower.tscn" id="4_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://bifl70eblpivq" path="res://Scenes/drop_pod.tscn" id="5_rku1e"]
@@ -10,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://n3rm4h2yi6xq" path="res://Scenes/entity/enemy/swarmer_enemy.tscn" id="7_1phco"]
 [ext_resource type="PackedScene" uid="uid://cbpmt4otlisnm" path="res://Scenes/entity/enemy/ranged_enemy.tscn" id="8_nb51f"]
 [ext_resource type="PackedScene" uid="uid://y5d8hxg8vk7b" path="res://Scenes/ui/pause_menu.tscn" id="10_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://dofxqn7i17i6" path="res://Scenes/ui/main_menu/main_menu.tscn" id="10_rku1e"]
 [ext_resource type="PackedScene" uid="uid://wcm8fssonn3x" path="res://Scenes/ui/hud.tscn" id="11_o5yvi"]
+[ext_resource type="PackedScene" uid="uid://kw3tnusl3jns" path="res://Scenes/ui/main_menu/splash_screen.tscn" id="12_rku1e"]
 
 [sub_resource type="Resource" id="Resource_qxrlw"]
 script = ExtResource("6_rfjv2")
@@ -38,15 +39,15 @@ unique_name_in_owner = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1548426822]
 
-[node name="PlayerSelect" parent="CanvasLayer" unique_id=586804313 instance=ExtResource("2_qxrlw")]
+[node name="Hud" parent="CanvasLayer" unique_id=1138256287 instance=ExtResource("11_o5yvi")]
 unique_name_in_owner = true
 
-[node name="Hud" parent="CanvasLayer" unique_id=1138256287 instance=ExtResource("11_o5yvi")]
+[node name="MainMenu" parent="CanvasLayer" unique_id=1001957899 instance=ExtResource("10_rku1e")]
 unique_name_in_owner = true
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=1537619581 instance=ExtResource("10_ldgsr")]
 unique_name_in_owner = true
 
-[connection signal="SelectedKatanaPlayer" from="CanvasLayer/PlayerSelect" to="." method="_select_player_katana"]
-[connection signal="SelectedSniperPlayer" from="CanvasLayer/PlayerSelect" to="." method="_select_player_sniper"]
+[node name="Splash Screen" parent="CanvasLayer" unique_id=344676566 instance=ExtResource("12_rku1e")]
+
 [connection signal="quit_game" from="CanvasLayer/PauseMenu" to="." method="_on_pause_menu_quit_game"]
