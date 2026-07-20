@@ -63,8 +63,11 @@ func update_effect(delta: float) -> void:
 	for effect in effects:
 		effect.remaining_duration -= delta
 
+func _get_input_dir() -> Vector2:
+	return Input.get_vector("move_left", "move_right", "move_up", "move_down")
+
 func movement(delta: float) -> void:
-	var input_dir : Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	var input_dir := _get_input_dir()
 	
 	if input_dir.x:
 		velocity.x = input_dir.x * current_speed 

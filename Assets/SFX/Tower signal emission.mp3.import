@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3la1o3aca1sv"
+path="res://.godot/imported/Tower signal emission.mp3-65dca7ce94b748f11f761d059b0beedf.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/Tower signal emission.mp3"
+dest_files=["res://.godot/imported/Tower signal emission.mp3-65dca7ce94b748f11f761d059b0beedf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

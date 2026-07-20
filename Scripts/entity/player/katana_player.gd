@@ -15,6 +15,11 @@ func _process(delta: float) -> void:
 		_handle_animation()
 
 func _handle_animation():
+	if (!_alive):
+		if (!player_death_animation_played):
+			animated_sprite_2d.play("die")
+			player_death_animation_played = true
+		return
 	if velocity == Vector2.ZERO:
 		animated_sprite_2d.play("idle")
 	if velocity.x != 0:
@@ -28,6 +33,7 @@ func _handle_animation():
 			animated_sprite_2d.play("front_run")
 		else:
 			animated_sprite_2d.play("back_run")
+			
 func _play_attack_animation():
 	if is_attacking:
 		return

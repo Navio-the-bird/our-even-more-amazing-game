@@ -17,6 +17,13 @@ var cooldown:float = 1
 
 signal player_attack
 signal death
+var player_death_animation_played:bool = false
+
+@onready
+var attack_sfx_player:= $AttackSound
+
+@onready
+var walk_sfx_player: AudioStreamPlayer = $WalkSound
 
 func _ready() -> void:
 	current_speed = 3000
@@ -24,6 +31,11 @@ func _ready() -> void:
 	current_health = current_max_health
 
 func _physics_process(delta: float) -> void:
+	if (velocity.length() > 0 && !walk_sfx_player.playing):
+		walk_sfx_player.play()
+	else:
+		walk_sfx_player.stop()
+		
 	if (!_alive): return
 	super._physics_process(delta)
 	if Input.is_action_pressed("attack") and can_attack:
@@ -36,9 +48,10 @@ func attack() -> void:
 	if (!projectile_scene):
 		print('No projectile scene!!')
 		return
+	attack_sfx_player.play()
 	var target := get_global_mouse_position()
-	var instance := projectile_scene.instantiate() as DamagingProjectile
 	var dir := (target - global_position).normalized()
+	var instance := projectile_scene.instantiate() as DamagingProjectile
 	const offset := 50
 	instance.creator = self
 	instance.global_rotation = dir.angle()
@@ -51,3 +64,8 @@ func _handle_death():
 	print('Player is dead!')
 	
 	death.emit()
+	
+func _get_attack_direction() -> Vector2:
+	var target := get_global_mouse_position()
+	var dir := (target - global_position).normalized()
+	return dir

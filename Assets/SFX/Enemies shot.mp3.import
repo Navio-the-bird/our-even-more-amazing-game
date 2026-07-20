@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lmnurk48peqp"
+path="res://.godot/imported/Enemies shot.mp3-8c3e2033fa92c4e6b8d2f0e118b15290.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/Enemies shot.mp3"
+dest_files=["res://.godot/imported/Enemies shot.mp3-8c3e2033fa92c4e6b8d2f0e118b15290.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

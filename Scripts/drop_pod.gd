@@ -14,7 +14,6 @@ var _opened := false
 const threshold: float = 1 #The threshold at which to decide we've reached our destination
 
 func _ready() -> void:
-	print('Moving from ', global_position,' to ', destination)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

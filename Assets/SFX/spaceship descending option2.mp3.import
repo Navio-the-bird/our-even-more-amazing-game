@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drl13he507jn1"
+path="res://.godot/imported/spaceship descending option2.mp3-10201be264b9b975d0a8e362b4c3937b.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/spaceship descending option2.mp3"
+dest_files=["res://.godot/imported/spaceship descending option2.mp3-10201be264b9b975d0a8e362b4c3937b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
