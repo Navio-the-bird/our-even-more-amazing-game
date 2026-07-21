@@ -31,7 +31,7 @@ var playing_walking_sound:bool = false
 
 func _ready() -> void:
 	current_speed = 3000
-	current_max_health = 200
+	current_max_health = 300
 	current_health = current_max_health
 
 func _physics_process(delta: float) -> void:

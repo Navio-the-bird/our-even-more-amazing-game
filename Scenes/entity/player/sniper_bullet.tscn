@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://byi6mv0chmbbx" path="res://Assets/player_projectile.png" id="2_hgwxb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvcc5"]
-size = Vector2(158, 24)
+size = Vector2(212, 40)
 
 [node name="Sniper Bullet" type="Node2D" unique_id=1366463878]
 script = ExtResource("1_hgwxb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1635692152]
-scale = Vector2(1.0125, 0.40579712)
+scale = Vector2(1.325, 0.5797101)
 texture = ExtResource("2_hgwxb")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1286064134]

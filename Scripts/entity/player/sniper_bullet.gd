@@ -4,7 +4,7 @@ extends DamagingProjectile
 func _ready() -> void:
 	speed = 9000
 	lifetime = 5000
-	damage = 40
+	damage = 60
 	pierce = 1
 	super._ready()
 

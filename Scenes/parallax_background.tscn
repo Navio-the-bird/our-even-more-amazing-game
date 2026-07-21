@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://c6lg4p87hw1jd"]
 
-[ext_resource type="Texture2D" uid="uid://difa5opuyvtpi" path="res://Assets/background/bg.png" id="1_0fo66"]
+[ext_resource type="Texture2D" uid="uid://ce57w31ug1t5a" path="res://Assets/background/bg.webp" id="1_0fo66"]
 
 [node name="ParallaxBackground" type="Parallax2D" unique_id=105608464]
 repeat_size = Vector2(3840, 2160)
 repeat_times = 3
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=886671909]
+position = Vector2(-1987.1041, -1134)
+scale = Vector2(4.2550597, 4.2194734)
 texture = ExtResource("1_0fo66")
 centered = false
