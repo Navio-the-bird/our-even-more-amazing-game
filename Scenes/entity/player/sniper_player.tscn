@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://5kfgct5q1wio"]
 
 [ext_resource type="Script" uid="uid://bmu5evxgigp6t" path="res://Scripts/entity/player/sniper_player.gd" id="1_dn5mc"]
-[ext_resource type="Texture2D" uid="uid://c3xpexv0yxa3" path="res://Assets/IMG_0055.jpeg" id="1_ndy3m"]
 [ext_resource type="PackedScene" uid="uid://cyy0b4ib1522f" path="res://Scenes/entity/player/sniper_bullet.tscn" id="2_w1354"]
 [ext_resource type="Texture2D" uid="uid://co8lhsidxl4rs" path="res://Assets/LEX/shooting/LEXshoot back.png" id="4_xs2ri"]
 [ext_resource type="Texture2D" uid="uid://cp4fmcdagfr74" path="res://Assets/LEX/shooting/LEXshoot front.png" id="5_44o30"]
@@ -728,11 +727,6 @@ sniper_bullet = ExtResource("2_w1354")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=646484807]
 shape = SubResource("CapsuleShape2D_ssmoh")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=146430318]
-visible = false
-scale = Vector2(0.07936508, 0.18783069)
-texture = ExtResource("1_ndy3m")
 
 [node name="Cooldown" type="Timer" parent="." unique_id=1317381364]
 unique_name_in_owner = true
