@@ -10,41 +10,44 @@
 script = ExtResource("2_drsoa")
 metadata/_custom_type_script = "uid://d5m5wt4pwng7"
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlxwg"]
+atlas = ExtResource("5_dlxwg")
+region = Rect2(0, 0, 1301, 2084)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_iqu2f"]
 atlas = ExtResource("5_dlxwg")
-region = Rect2(0, 0, 2602, 4169)
+region = Rect2(1301, 0, 1301, 2084)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuplc"]
 atlas = ExtResource("5_dlxwg")
-region = Rect2(2602, 0, 2602, 4169)
+region = Rect2(2602, 0, 1301, 2084)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g45rr"]
 atlas = ExtResource("5_dlxwg")
-region = Rect2(5204, 0, 2602, 4169)
+region = Rect2(0, 2084, 1301, 2084)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fw7r7"]
 atlas = ExtResource("5_dlxwg")
-region = Rect2(0, 4169, 2602, 4169)
+region = Rect2(1301, 2084, 1301, 2084)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hi5hf"]
 atlas = ExtResource("5_dlxwg")
-region = Rect2(2602, 4169, 2602, 4169)
+region = Rect2(2602, 2084, 1301, 2084)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nfepq"]
 atlas = ExtResource("5_dlxwg")
-region = Rect2(5204, 4169, 2602, 4169)
+region = Rect2(3903, 0, 1301, 2084)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w87ah"]
 atlas = ExtResource("5_dlxwg")
-region = Rect2(7806, 4169, 2602, 4169)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hostf"]
-atlas = ExtResource("5_dlxwg")
-region = Rect2(7806, 0, 2602, 4169)
+region = Rect2(3903, 2084, 1301, 2084)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ssmoh"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlxwg")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iqu2f")
 }, {
@@ -65,9 +68,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w87ah")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hostf")
 }],
 "loop": 1,
 "name": &"default",
@@ -84,7 +84,7 @@ unique_name_in_owner = true
 one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1477856303]
-scale = Vector2(0.43889317, 0.3952987)
+scale = Vector2(0.9, 0.9)
 sprite_frames = SubResource("SpriteFrames_ssmoh")
 autoplay = "default"
 frame_progress = 0.2607717
