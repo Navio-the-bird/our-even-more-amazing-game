@@ -1,7 +1,7 @@
 extends Control
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@export var ignore_splash_screen: bool = false
+@export var ignore_splash_screen: bool = true
 
 func _ready() -> void:
 	if ignore_splash_screen:

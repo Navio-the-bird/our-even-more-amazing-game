@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cjkwyvkjcvjd0"]
+
+[ext_resource type="Script" uid="uid://bd6pijgy5sn3j" path="res://Scripts/marker.gd" id="1_15koh"]
+[ext_resource type="Texture2D" uid="uid://bxpfuqp8woijk" path="res://Assets/marker.png" id="2_08wab"]
+
+[node name="Marker" type="Node2D" unique_id=916637489]
+top_level = true
+script = ExtResource("1_15koh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=154867493]
+scale = Vector2(0.47109208, 0.5415385)
+texture = ExtResource("2_08wab")

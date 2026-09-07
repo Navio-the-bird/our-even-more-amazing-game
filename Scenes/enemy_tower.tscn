@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bmgpnvqnio4in" path="res://Scripts/entity/enemy/enemy_tower.gd" id="1_jmy6o"]
 [ext_resource type="Script" uid="uid://d5m5wt4pwng7" path="res://Scripts/entity/tower/enemy_tower_config.gd" id="2_drsoa"]
 [ext_resource type="PackedScene" uid="uid://cu7ywplchx2qh" path="res://Scenes/broken_tower.tscn" id="3_wysaq"]
+[ext_resource type="PackedScene" uid="uid://cjkwyvkjcvjd0" path="res://Scenes/marker.tscn" id="4_iqu2f"]
 [ext_resource type="Texture2D" uid="uid://dr7pme1qv4tou" path="res://Assets/Signal Tower/Signal Tower.png" id="5_dlxwg"]
 [ext_resource type="AudioStream" uid="uid://d3la1o3aca1sv" path="res://Assets/SFX/Tower signal emission.mp3" id="6_tuplc"]
 
@@ -78,16 +79,11 @@ animations = [{
 script = ExtResource("1_jmy6o")
 config = SubResource("Resource_w1354")
 broken_tower_scene = ExtResource("3_wysaq")
+marker_scene = ExtResource("4_iqu2f")
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=123809344]
 unique_name_in_owner = true
 one_shot = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1477856303]
-scale = Vector2(0.9, 0.9)
-sprite_frames = SubResource("SpriteFrames_ssmoh")
-autoplay = "default"
-frame_progress = 0.2607717
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1610079396]
 polygon = PackedVector2Array(-361, 475, -238, 94, -67, -142, -65, -276, 7, -400, 110, -207, 113, -131, 300, 100, 399, 446)
@@ -95,3 +91,17 @@ polygon = PackedVector2Array(-361, 475, -238, 94, -67, -142, -65, -276, 7, -400,
 [node name="IdleSound" type="AudioStreamPlayer2D" parent="." unique_id=1922104294]
 unique_name_in_owner = true
 stream = ExtResource("6_tuplc")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=550482452]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VisibleOnScreenEnabler2D" unique_id=1477856303]
+position = Vector2(0, -32.399998)
+scale = Vector2(0.9, 0.86890596)
+sprite_frames = SubResource("SpriteFrames_ssmoh")
+autoplay = "default"
+frame_progress = 0.371774
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1422787776]
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_screen"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_exit_screen"]

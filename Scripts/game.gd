@@ -84,13 +84,13 @@ func _start_combat():
 	for i in range(TOWER_AMT):
 		config_array.push_back(_get_random_tower_config())
 	
-	active_enemy_towers = []
-	spawn_a_shitload_of_towers(config_array, %CombatContainer, %CombatContainer )
-	
 	camera = Camera2D.new()
 	camera.zoom = Vector2(0.2, 0.2)
 	camera.position_smoothing_enabled = true
 	camera.make_current()
+	
+	active_enemy_towers = []
+	spawn_a_shitload_of_towers(config_array, %CombatContainer, %CombatContainer, camera )
 	
 	#%Hud.max_player_health = player.current_max_health
 	#%Hud.current_player_health = player.current_health
@@ -157,6 +157,7 @@ func spawn_a_shitload_of_towers(
 		tc : Array[EnemyTowerConfig], 
 		enemy_container : Node2D,
 		tower_holder : Node2D,
+		camera: Camera2D
 	) -> void:
 	
 	var current_towers : Array[Vector2]	
@@ -176,6 +177,7 @@ func spawn_a_shitload_of_towers(
 			tc[i],
 			current_towers,
 			enemy_container,
+			camera
 		)
 		
 		tower_holder.add_child(tower)
@@ -191,6 +193,7 @@ func create_tower(
 		tc : EnemyTowerConfig,
 		current_towers : Array[Vector2],
 		enemy_container : Node2D,
+		camera: Camera2D
 	) -> EnemyTower:
 	var tower: EnemyTower = tower_scene.instantiate()
 	
@@ -199,6 +202,7 @@ func create_tower(
 	tower.enemies = enemy_list
 	tower.enemy_container = enemy_container
 	tower.drop_pod_scene = drop_pod_scene
+	tower.camera = camera
 	
 	var pos = generate_random_tower_coordinates(tc, current_towers)
 	tower.global_position = pos

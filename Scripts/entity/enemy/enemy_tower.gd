@@ -15,10 +15,14 @@ extends Entity
 
 @export var drop_pod_scene: PackedScene
 @export var broken_tower_scene: PackedScene
+@export var marker_scene: PackedScene
+
+@export var camera: Camera2D
 
 var timer: Timer
 var living_enemies: Array[BaseEnemy]
 var _viewport_height:float
+var marker: TowerMarker
 
 #Signal for when the tower gets destroyed. I realise we could consolidate every death signal into the entity class but we're pretty damn short on time >v<
 signal destruction(object_ref:EnemyTower)
@@ -35,6 +39,11 @@ func _ready() -> void:
 	current_max_health = 1200
 	timer.timeout.connect(_try_spawn)
 	_set_timer_rand()
+	
+	marker = marker_scene.instantiate()
+	marker.tower_position = position
+	marker.camera = camera
+	enemy_container.add_child(marker)
 	super._ready()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -91,8 +100,16 @@ func movement(delta: float) -> void:
 	return
 
 func _handle_death():
+	marker.queue_free()
 	var instance := broken_tower_scene.instantiate() as Node2D
 	instance.global_position = global_position
 	get_parent().add_child(instance)
 	destruction.emit(self)
 	queue_free()
+
+
+func _on_screen() -> void:
+	marker.hide()
+
+func _exit_screen() -> void:
+	marker.show()
