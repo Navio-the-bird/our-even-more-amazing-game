@@ -133,6 +133,7 @@ texture = ExtResource("2_5isg7")
 
 [node name="PlayerSelect" type="Control" parent="." unique_id=586804313]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -298,7 +299,6 @@ vertical_alignment = 1
 
 [node name="Main" type="Control" parent="." unique_id=1541565617]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -340,6 +340,8 @@ theme_override_constants/separation = 40
 layout_mode = 2
 size_flags_vertical = 3
 offset_transform_enabled = true
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("5_1rgip")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_3erb8")
@@ -352,6 +354,8 @@ hover_additional_text = " :3"
 [node name="CreditsButton" type="Button" parent="Main/MarginContainer/VBoxContainer/VBoxContainer" unique_id=978955765]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("5_1rgip")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_3erb8")
@@ -364,6 +368,9 @@ hover_additional_text = " UwU"
 [node name="QuitButton" type="Button" parent="Main/MarginContainer/VBoxContainer/VBoxContainer" unique_id=108042364]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_outline_color = Color(0.23529412, 0, 0, 1)
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("5_1rgip")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_3xdky")
@@ -501,7 +508,7 @@ text = "Programmer, Game Designer
 
 Game Designer, Character Designer, UI/UX Designer, Programmer
 
-Prootzel — Composer, Sound Designer, Programmer
+Composer, Sound Designer, Programmer
 
 Artist, Character Designer
 
