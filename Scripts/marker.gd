@@ -31,4 +31,27 @@ func _process(delta: float) -> void:
 		
 	var scale :float = min(abs(scale_x), abs(scale_y))
 	var new_pos = world_screen_center + direction *scale
-	global_position = new_pos
+	global_position = global_position.move_toward(new_pos, 50)
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	return
+	var parent = area.get_parent()
+	if (parent is not TowerMarker): return
+	var tparent := parent as TowerMarker
+	
+	if (!tparent.visible): return
+	hide()
+	tparent.scale *= 1.5
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	return
+	var parent = area.get_parent()
+	if (parent is not TowerMarker): return
+	var tparent := parent as TowerMarker
+	
+	if (!tparent.visible): return
+	show()
+	tparent.scale /= 1.5
+	
