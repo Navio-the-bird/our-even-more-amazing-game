@@ -19,9 +19,10 @@ func _process(delta: float) -> void:
 	var world_screen_center := camera.get_screen_center_position()
 	
 	var direction := tower_position - world_screen_center
-	const margin = 250
-	var max_x := visible_world_size.x/2 - margin
-	var max_y := visible_world_size.y/2 - margin
+	const margin_x = 250
+	const margin_y = 800
+	var max_x := visible_world_size.x/2 - margin_x
+	var max_y := visible_world_size.y/2 - margin_y
 	
 	var scale_x:float = 1000000
 	var scale_y:float = scale_x
@@ -29,9 +30,14 @@ func _process(delta: float) -> void:
 	if (direction.x != 0): scale_x = max_x/direction.x
 	if (direction.y != 0): scale_y = max_y/direction.y
 		
-	var scale :float = min(abs(scale_x), abs(scale_y))
-	var new_pos = world_screen_center + direction *scale
+	var v_scale :float = min(abs(scale_x), abs(scale_y))
+	var new_pos = world_screen_center + direction *v_scale
 	global_position = global_position.move_toward(new_pos, 50)
+	
+	const size_scale_factor = 150
+	var d_scale = clamp(size_scale_factor/sqrt((direction.length())), 1, 3) 
+	rotation =  direction.angle()
+	scale = Vector2(1, 1) * d_scale
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

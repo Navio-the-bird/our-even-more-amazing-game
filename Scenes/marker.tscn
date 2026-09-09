@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cjkwyvkjcvjd0"]
 
 [ext_resource type="Script" uid="uid://bd6pijgy5sn3j" path="res://Scripts/marker.gd" id="1_15koh"]
-[ext_resource type="Texture2D" uid="uid://bxpfuqp8woijk" path="res://Assets/marker.png" id="2_08wab"]
+[ext_resource type="Texture2D" uid="uid://coaicwhctnu5i" path="res://Assets/Marker.png" id="2_08wab"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssmoh"]
 size = Vector2(466, 386)
@@ -10,7 +10,8 @@ size = Vector2(466, 386)
 top_level = true
 script = ExtResource("1_15koh")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=154867493]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=154867493]
+rotation = 1.5865324
 scale = Vector2(0.47109208, 0.5415385)
 texture = ExtResource("2_08wab")
 
