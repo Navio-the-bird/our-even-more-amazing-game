@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 	
 	const size_scale_factor = 150
 	var d_scale = clamp(size_scale_factor/sqrt((direction.length())), 1, 3) 
-	rotation =  direction.angle()
+	%SpriteBackground.rotation =  direction.angle()
 	scale = Vector2(1, 1) * d_scale
 
 
