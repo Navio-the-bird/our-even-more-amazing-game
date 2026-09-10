@@ -95,6 +95,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_enabled = true
 theme = ExtResource("1_a6lj5")
 script = ExtResource("2_a6lj5")
 randomTexts = Array[String](["Dex & Lex went on to live a rich and fulfulling life, possibly finding a girlfriend/boyfriend some day", "\"Hey you know, I saved the world. My brother couldn't come, he was doing something. So, want to head to my place....?\"", "Dex & Lex will return in..... 

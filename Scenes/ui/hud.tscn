@@ -3,6 +3,13 @@
 [ext_resource type="Script" uid="uid://t2k2ps4btsuo" path="res://Scenes/ui/hud.gd" id="1_ateb2"]
 [ext_resource type="FontFile" uid="uid://dvfb4u6y6te66" path="res://Assets/Black_Ops_One Font/BlackOpsOne-Regular.ttf" id="2_8ercd"]
 
+[sub_resource type="Gradient" id="Gradient_8ercd"]
+colors = PackedColorArray(0, 0, 0, 0.49803922, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2ka6f"]
+gradient = SubResource("Gradient_8ercd")
+fill_to = Vector2(0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ercd"]
 bg_color = Color(0.15294118, 0.15294118, 0.15294118, 0.40784314)
 border_width_left = 8
@@ -27,6 +34,14 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="Gradient" id="Gradient_kpdpg"]
+colors = PackedColorArray(0, 0, 0, 0.49803922, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ejfn5"]
+gradient = SubResource("Gradient_kpdpg")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
 [sub_resource type="Theme" id="Theme_ssmoh"]
 default_font = ExtResource("2_8ercd")
 default_font_size = 53
@@ -40,31 +55,56 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ateb2")
 
-[node name="HealthBar" type="ProgressBar" parent="." unique_id=930010243]
+[node name="TopBar" type="TextureRect" parent="." unique_id=1729579282]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+texture = SubResource("GradientTexture2D_2ka6f")
+
+[node name="HealthBar" type="ProgressBar" parent="TopBar" unique_id=930010243]
 unique_name_in_owner = true
 clip_contents = true
-layout_mode = 0
-offset_left = 49.795
-offset_top = 45.38
-offset_right = 673.0
-offset_bottom = 107.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_top = -33.0
+offset_right = 683.2051
+offset_bottom = 28.619995
+grow_vertical = 2
 size_flags_vertical = 1
 theme_override_styles/background = SubResource("StyleBoxFlat_8ercd")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ateb2")
 value = 96.0
 show_percentage = false
 
-[node name="TowerCount" type="Label" parent="." unique_id=708587632]
+[node name="BottomBar" type="TextureRect" parent="." unique_id=1650326043]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_ejfn5")
+
+[node name="TowerCount" type="Label" parent="BottomBar" unique_id=708587632]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 321.07
-offset_top = -110.0
-offset_right = 714.06995
-offset_bottom = -40.0
-grow_vertical = 0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 354.0
+offset_top = -35.0
+offset_right = 746.99994
+offset_bottom = 35.0
+grow_vertical = 2
 theme = SubResource("Theme_ssmoh")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -75,16 +115,16 @@ theme_override_constants/shadow_outline_size = 20
 text = "towers"
 vertical_alignment = 1
 
-[node name="TowerText" type="Label" parent="." unique_id=332739929]
+[node name="TowerText" type="Label" parent="BottomBar" unique_id=332739929]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 33.0
-offset_top = -110.0
-offset_right = 426.0
-offset_bottom = -40.0
-grow_vertical = 0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_top = -35.0
+offset_right = 453.0
+offset_bottom = 35.0
+grow_vertical = 2
 theme = SubResource("Theme_ssmoh")
 theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.8627451, 1)
 theme_override_colors/font_shadow_color = Color(0.096204676, 0.096204765, 0.09620469, 1)

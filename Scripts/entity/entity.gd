@@ -6,6 +6,8 @@ const DEFAULT_MAX_HEALTH: int = 100
 
 var current_speed: float
 
+var is_invincible: bool = false
+
 signal health_change(current_health:int)
 signal max_health_change(current_max_health:int)
 var current_max_health: int:
@@ -63,12 +65,7 @@ func update_effect(delta: float) -> void:
 	for effect in effects:
 		effect.remaining_duration -= delta
 
-func _get_input_dir() -> Vector2:
-	return Input.get_vector("move_left", "move_right", "move_up", "move_down")
-
 func movement(delta: float) -> void:
-	var input_dir := _get_input_dir()
-	
 	if input_dir.x:
 		velocity.x = input_dir.x * current_speed 
 	else:
@@ -83,7 +80,7 @@ func movement(delta: float) -> void:
 
 #TODO: Animations, invincibility frames etc
 func inflict_damage(object:Node2D, value:int) -> void:
-	if (!_alive): return
+	if (!_alive or is_invincible): return
 	current_health -= value
 	_indicate_damage()
 	if (current_health <= 0):

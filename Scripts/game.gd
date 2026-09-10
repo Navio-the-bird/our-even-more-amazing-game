@@ -69,8 +69,10 @@ func _on_pause_menu_quit_game() -> void:
 
 func _on_tower_destroy(obj:EnemyTower):
 	active_enemy_towers.erase(obj)
-	%Hud.set_tower_count(len(active_enemy_towers))
-	pass
+	var tower_count: int = len(active_enemy_towers)
+	%Hud.set_tower_count(tower_count)
+	if tower_count <= 0:
+		on_all_tower_destroyed()
 
 func _start_combat():
 	#First take out the trash
@@ -119,6 +121,12 @@ func _get_random_tower_config():
 func on_player_death():
 	#battle_track_player.stop_all()
 	%GameOverMenu.game_over()
+
+func on_all_tower_destroyed():
+	%GameOverMenu.victory()
+	if player: 
+		player.is_invincible = true
+		player.prevent_control = true
 
 ###### Prootzel's tower generation below
 

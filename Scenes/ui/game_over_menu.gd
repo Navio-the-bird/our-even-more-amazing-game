@@ -9,28 +9,39 @@ signal quit_game
 
 @export_multiline var randomTexts: Array[String]
 
+var victory_animation_time: float = 0.5
+
 func _ready() -> void:
 	subtitle.hide()
 	self.hide()
+	
+	victory()
 
 func _unpause_game():
 	self.hide()
 	get_tree().paused = false
 
 func game_over():
-	show_menu()
+	if %MainMenu and %MainMenu.visible:
+		return
+	self.show()
+	get_tree().paused = true
 
 func victory():
 	title.text = "VICTORY"
 	subtitle.show()
 	subtitle.text = randomTexts.pick_random()
-	show_menu()
-
-func show_menu():
+	
 	if %MainMenu and %MainMenu.visible:
 		return
+	
+	offset_transform_scale = Vector2(0.25, 0.25)
+	modulate = Color.TRANSPARENT
 	self.show()
-	get_tree().paused = true
+	
+	create_tween().tween_property(self, "offset_transform_scale", Vector2.ONE, victory_animation_time).set_trans(Tween.TRANS_SINE)
+	create_tween().tween_property(self, "modulate", Color.WHITE, victory_animation_time).set_trans(Tween.TRANS_SINE)
+
 
 func _on_quit_pressed() -> void:
 	_unpause_game()

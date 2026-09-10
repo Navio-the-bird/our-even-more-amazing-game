@@ -20,6 +20,7 @@ var cooldown:float = 1
 signal player_attack
 signal death
 var player_death_animation_played:bool = false
+var prevent_control: bool = false
 
 @onready
 var attack_sfx_player:= $AttackSound
@@ -35,6 +36,8 @@ func _ready() -> void:
 	current_health = current_max_health
 
 func _physics_process(delta: float) -> void:
+	if !prevent_control: input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	
 	if (velocity.length() > 1):
 		if (!walk_sfx_player.currently_playing):
 			walk_sfx_player.play()
@@ -43,7 +46,7 @@ func _physics_process(delta: float) -> void:
 		
 	if (!_alive): return
 	super._physics_process(delta)
-	if Input.is_action_pressed("attack") and can_attack:
+	if Input.is_action_pressed("attack") and can_attack and !prevent_control:
 		attack()
 		can_attack = false
 		await get_tree().create_timer(attack_cooldown).timeout
