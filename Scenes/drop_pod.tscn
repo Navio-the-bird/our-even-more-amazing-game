@@ -34,6 +34,7 @@ disabled = true
 unique_name_in_owner = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2140056558]
+z_index = 1000
 scale = Vector2(0.46114647, 0.44298244)
 sprite_frames = SubResource("SpriteFrames_ssmoh")
 autoplay = "default"
