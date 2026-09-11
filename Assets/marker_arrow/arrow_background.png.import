@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxpfuqp8woijk"
-path="res://.godot/imported/marker.png-7376e7bb18ea6c8cf93068a6c8852788.ctex"
+uid="uid://cta2g3hbmuydg"
+path="res://.godot/imported/arrow_background.png-1f9359348146f5654da838301818ee4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/marker.png"
-dest_files=["res://.godot/imported/marker.png-7376e7bb18ea6c8cf93068a6c8852788.ctex"]
+source_file="res://Assets/marker_arrow/arrow_background.png"
+dest_files=["res://.godot/imported/arrow_background.png-1f9359348146f5654da838301818ee4b.ctex"]
 
 [params]
 
