@@ -10,8 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Proto Signal"
-config/version="2.0"
+config/name="New Game Project"
 run/main_scene="uid://yicge48108e0"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://dvbc575avy6ri"
@@ -26,7 +25,7 @@ ControlManager="uid://cta2pfnc8vtql"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [file_customization]

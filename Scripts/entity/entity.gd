@@ -78,6 +78,17 @@ func movement(delta: float) -> void:
 	
 	move_and_slide()
 
+@export var hit_effect_scene: PackedScene
+
+func _spawn_hit_effect() -> void:
+	if not hit_effect_scene:
+		return
+	var fx := hit_effect_scene.instantiate()
+	get_parent().add_child(fx)
+	fx.global_position = global_position
+	
+
+
 #TODO: Animations, invincibility frames etc
 func inflict_damage(object:Node2D, value:int) -> void:
 	if (!_alive or is_invincible): return
@@ -98,6 +109,7 @@ func _indicate_damage() -> void:
 	damage_tween = create_tween()
 	sprite.modulate = Color(0.912, 0.0, 0.121, 0.502)
 	damage_tween.tween_property(sprite, "modulate", Color.WHITE, 0.30)
+	_spawn_hit_effect()
 
 func _just_died():
 	_alive = false
