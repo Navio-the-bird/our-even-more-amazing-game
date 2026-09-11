@@ -98,8 +98,7 @@ grow_vertical = 2
 offset_transform_enabled = true
 theme = ExtResource("1_a6lj5")
 script = ExtResource("2_a6lj5")
-randomTexts = Array[String](["Dex & Lex went on to live a rich and fulfulling life, possibly finding a girlfriend/boyfriend some day", "\"Hey you know, I saved the world. My brother couldn't come, he was doing something. So, want to head to my place....?\"", "Dex & Lex will return in..... 
-The Steam release"])
+randomTexts = Array[String](["_VICTORY_LINE1", "_VICTORY_LINE2", "_VICTORY_LINE3"])
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=975404766]
 layout_mode = 1
@@ -141,7 +140,7 @@ theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
 theme_override_font_sizes/normal_font_size = 128
 bbcode_enabled = true
-text = "GAME OVER"
+text = "_GAMEOVER_TITLE"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
@@ -174,7 +173,7 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_yy58d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jwth1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bfouo")
-text = "Play Again"
+text = "_GAMEOVER_PLAY_AGAIN"
 script = ExtResource("4_b78ve")
 
 [node name="QuitButton" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1982229035]
@@ -188,7 +187,7 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_wqh3t")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jwth1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqj3n")
-text = "Quit to Main Menu"
+text = "_GAMEOVER_QUIT"
 script = ExtResource("4_b78ve")
 
 [connection signal="delayed_pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/VBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_delayed_pressed"]

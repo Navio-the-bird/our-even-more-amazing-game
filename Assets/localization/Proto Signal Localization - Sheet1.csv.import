@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b17vymv5is1c7"
+
+[deps]
+
+files=["res://Assets/localization/Proto Signal Localization - Sheet1.en.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.af.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.de.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.fr.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.pt.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.vi.translation"]
+
+source_file="res://Assets/localization/Proto Signal Localization - Sheet1.csv"
+dest_files=["res://Assets/localization/Proto Signal Localization - Sheet1.en.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.af.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.de.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.fr.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.pt.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.vi.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

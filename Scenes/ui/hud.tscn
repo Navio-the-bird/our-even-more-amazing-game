@@ -94,17 +94,31 @@ grow_horizontal = 2
 grow_vertical = 0
 texture = SubResource("GradientTexture2D_ejfn5")
 
-[node name="TowerCount" type="Label" parent="BottomBar" unique_id=708587632]
-unique_name_in_owner = true
+[node name="HBoxContainer" type="HBoxContainer" parent="BottomBar" unique_id=1211955239]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 354.0
-offset_top = -35.0
-offset_right = 746.99994
-offset_bottom = 35.0
+offset_left = 60.0
+offset_top = -33.5
+offset_right = 447.0
+offset_bottom = 33.5
 grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="TowerText" type="Label" parent="BottomBar/HBoxContainer" unique_id=332739929]
+layout_mode = 2
+theme = SubResource("Theme_ssmoh")
+theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.8627451, 1)
+theme_override_colors/font_shadow_color = Color(0.096204676, 0.096204765, 0.09620469, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_font_sizes/font_size = 40
+text = "_HUD_TL"
+vertical_alignment = 1
+
+[node name="TowerCount" type="Label" parent="BottomBar/HBoxContainer" unique_id=708587632]
+unique_name_in_owner = true
+layout_mode = 2
 theme = SubResource("Theme_ssmoh")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -113,24 +127,6 @@ theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_outline_size = 20
 text = "towers"
-vertical_alignment = 1
-
-[node name="TowerText" type="Label" parent="BottomBar" unique_id=332739929]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 60.0
-offset_top = -35.0
-offset_right = 453.0
-offset_bottom = 35.0
-grow_vertical = 2
-theme = SubResource("Theme_ssmoh")
-theme_override_colors/font_color = Color(0.8627451, 0.8627451, 0.8627451, 1)
-theme_override_colors/font_shadow_color = Color(0.096204676, 0.096204765, 0.09620469, 1)
-theme_override_constants/shadow_outline_size = 20
-theme_override_font_sizes/font_size = 40
-text = "Towers Left:"
 vertical_alignment = 1
 
 [node name="MissionText" type="Label" parent="." unique_id=506894029]
@@ -150,6 +146,8 @@ theme_override_constants/shadow_offset_y = 3
 theme_override_constants/shadow_outline_size = 46
 theme_override_fonts/font = ExtResource("2_8ercd")
 theme_override_font_sizes/font_size = 86
-text = "DESTROY THEIR TOWERS!"
+text = "_HUD_OBJ"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="visibility_changed" from="MissionText" to="." method="_on_mission_text_visibility_changed"]

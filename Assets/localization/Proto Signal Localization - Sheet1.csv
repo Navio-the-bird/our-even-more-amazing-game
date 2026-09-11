@@ -1,0 +1,57 @@
+key,en,af,de,fr,pt,vi
+_SC_SKIP,Press Space to skip,Spasie' om oor te slaan,Drücke die Leertaste um zu überspringen,Espace pour passer,Pressione espaço para pular,Nhấn phím Space để bỏ qua
+,,,,,,
+_MM_PLAY,Play,Speel,Start,Commencer,Jogar,Chơi
+_MM_OPTIONS,Options,Instellings,Einstellungen,Preferences,Opções,Cài đặt
+_MM_CREDITS,Credits,Krediet,Credits,Générique,Créditos,Tác giả
+_MM_QUIT,Quit,Verlaat,Beenden,Quitter,Sair,Thoát
+_MM_BACK,Back,Terug,Zurück,Retour,Voltar,Quay lại
+,,,,,,
+_PLAY_TITLE,CHOOSE YOUR PROTOGEN,KIES JOU PROTOGEN,WÄHLE DEINEN PROTOGEN,CHOISSISEZ VOTRE PROTOGEN,ESCOLHA SEU PROTOGEN,CHỌN PROTOGEN CỦA BẠN
+_PLAY_DEX_DESCRIPTION,Lightsaber - Melee,Lightsaber - Veg naby,Lichtschwert - Nahkampf,Sabre laser - Corps à corps,Sabre de luz - Corpo a corpo,Kiếm ánh sáng - Cận chiến
+_PLAY_LEX_DESCRIPTION,Laser Crossbow - Ranged,Lasarkruisboog - Veg van vêr af,Laser-Armbrust - Fernkampf ,Arbalète laser - À distance,Besta laser - Longo alcance,Cung Laser - Tầm xa
+,,,,,,
+_OPTIONS_TITLE,OPTIONS,INSTELLINGS,EINSTELLUNGEN,OPTIONS,OPÇÕES,CÀI ĐẶT
+_OPTIONS_AUDIO,Audio Volume,Klankvolume,Lautstärke,Volume audio,Volume de áudio,Âm lượng
+_OPTIONS_SM,Screen Mode,Venstertipe,Fenstermodus,Mode d'affichage,Mode de tela,Chế độ Màn hình
+_OPTIONS_SM_W,Windowed,Venster,Fenster,Fenêtré,Janela,Cửa sổ
+_OPTIONS_SM_BW,Borderless Windowed,Randlose Venster,Randloses Fenster,Fenêtré sans bordure,Janela sem borda,Cửa sổ không viền
+_OPTIONS_SM_FS,Fullscreen,Volskerm,Vollbild,Plein écran,Tela cheia,Toàn màn hình
+_OPTIONS_LANG,Language,Taal,Sprache,Langue,Idioma,Ngôn ngữ
+,,,,,,
+_CREDITS_TITLE,CREDITS,KREDIET,CREDITS,GÉNÉRIQUE,CRÉDITOS,TÁC GIẢ
+_CREDITS_TB_NAV,"Programmer, Game Designer",Ontwikkelaar,"Programmieren, Game-Design",Programmeur,"Programador, Game Designer","Lập trình, Thiết kế Game"
+_CREDITS_TB_MAX,"Game Designer, Character Designer, UI/UX Designer, Programmer",Ontwikkelaar en gebruikerservaring,"Programmieren, Game-, Charakter- und UI/UX-Design","Programmeur, Design des personnages","Game Designer, Design de personagem, 
+Designer UI/UX, Programador","Thiết kế Game, Thiết kế Nhân vật, Thiết kế Giao diện, Lập trình"
+_CREDITS_TB_PROOT,"Composer, Sound Designer, Programmer","Komponis, klankontwerper, ontwikkelaar","Musik, Sounddesign, Programmieren","Progammeur, Musique, Sons","Compositor, Design de Som,
+Programador","Soạn nhạc, Thiết kế Âm thanh, Lập trình"
+_CREDITS_TB_SIMCA,"Artist, Character Designer","Kunstenaar, Karakterontwerp","Grafik, Musik, Sounddesign, Konzeptdesign",Artiste,"Ilustrador, Design de personagem","Họa sĩ, Thiết kế Nhân vật"
+_CREDITS_TB_YUM,"Artist, Composer, Sound Designer, Concept Artist","Kunstenaar, Komponis, Grafiese Ontwerp","Grafik, Musik, Sounddesign, Konzeptdesign","Artiste, Musique, Sons","Ilustrador, Compositor, Design de Som, 
+Concept Artist","Họa sĩ, Soạn nhạc, Thiết kế Âm thanh, Họa sĩ Phác thảo"
+_CREDITS_OC_T1,Other Attributions,Andere,Danke auch an,Des autre,Outros,Các Ghi công khác
+_CREDITS_OC_1,"UI Sounds, Hit Sounds",UI-en Tref-klanke,"UI- und Treffersounds, ",Sons de l'interface,"Sonorização UI, Sons de Hit","Âm thanh UI, Âm thanh Tấn công"
+_CREDITS_OC_T2,On Pixabay,Op Pixabay,Auf Pixabay,De Pixabay,No Pixabay,Trên Pixabay
+_CREDITS_OC_2,Katana sounds,Katanaklanke,Katanageräusche,Sons de katana,Sons de Katana,Âm thanh Katana
+_CREDITS_OC_3,Laser sounds,Lasarklanke,Lasergeräusche,Sons de laser,Sons de Laser,Âm thanh Laser
+_CREDITS_OC_4,Walking sounds,Loopklanke,Schrittgeräusche,Sons de marcher,Sons de passos,Âm thanh Đi bộ
+,,,,,,
+_HUD_OBJ,DESTROY THEIR TOWERS,KRY HULLE TORINGS,ZERSTÖRE IHRE TÜRME,DÉTRUISEZ LEURS TOURS,DESTRUA AS TORRES DELES,PHÁ HỦY CÁC TÒA THÁP CỦA CHÚNG
+_HUD_TL,Towers Left:,Torings nog oor:,Türme übrig:,Tours restantes,Torres ativas,Số Tòa tháp còn lại:
+_PAUSE_TITLE,PAUSE,POUSE,PAUSE,PAUSE,PAUSADO,TẠM DỪNG
+_PAUSE_RESUME,Resume,Speel,Zurück zum Spiel,Retour,Continuar,Tiếp tục chơi
+_GAMEOVER_PLAY_AGAIN,Play Again,Gaan Weer,Noch einmal spielen,Rejouer,Jogue de novo,Chơi lại
+_GAMEOVER_QUIT,Quit to Main Menu,Verlaat,Hauptmenü,Quitter,Voltar ao menu principal,Thoát ra Màn hình chính
+_GAMEOVER_TITLE,Game Over,Verloor,Spielende,Défaite,Fim de jogo,Thua cuộc
+_VICTORY_TITLE,VICTORY,WEN,GEWONNEN,VICTOIRE,VITÓRIA,CHIẾN THẮNG
+_VICTORY_LINE1,"Dex & Lex went on to live a rich and fulfulling life, possibly finding a girlfriend/boyfriend some day","So, met Dex & Lex nou klaar met hul kruistog gaan hulle voort om heel moontlik 'n vervullende lewe te lei! 'n Meisie? 'n Kêrel miskien.....?","Dex & Lex lebten daraufhin reich und glücklich, vielleicht fanden sie sogar einen Partner...","Après avoir gagné la bataille, Dex et Lex ont continué, on l'imagine, des vies très agréables. Peut-être avec un petit ami ou une petite amie? Qui sait?","Dex & Lex viveram uma vida plena 
+e satisfatória, possivelmente achando 
+um(a) namorado(a) algum dia...","Và từ đó, Dex và Lex tận hưởng một cuộc sống phong phú trọn vẹn, và có thể một ngày nào đó họ sẽ tìm được bạn gái hoặc bạn trai :)"
+_VICTORY_LINE2,"""Hey you know, I saved the world. My brother couldn't come, he was doing something. So, want to head to my place....?""","""Haai daar, slaaiblaar! >:)  Jy weet, ek HET tegnies die wêreld gered en- Wag waarheen gaan jy kom terug-""","""Hey, wie du siehst hab ich die Welt gerettet während mein Bruder mal wieder beschäftigt war... Willst du mit zu mir nach Hause kommen? Ich hab Spezi da!""","""Eh bien, j'ai sauvé le monde entier, tu sait? Et ce n'etait pas facile, pas de tout.... eh dis-moi, a-tu un petit ami?""","Eu acabei de salvar o mundo, sacomê né? 
+Meu irmão não pode vir, 
+ocupado com a vida, então...
+quer ir lá em casa comigo? <3
+Só eu, você e torradas fresquinhas","""Ồ vậy là tui vừa mới cứu thế giới đó, ghê chưa? Ông kia ổng không tới được, nói là bận làm gì đó. Mà thôi kệ ổng, bồ muốn về nhà tui chơi ăn mừng không? ( ͡° ͜ʖ ͡°)"""
+_VICTORY_LINE3,"Dex & Lex will return in..... 
+The Steam release",Dex & Lex sal terugkom in......... die Steam weergawe! As dit eendag bestaan,Dex und Lex werden im Steam-Release zurück sein!,Dex et Lex retourneront...... sur la version Steam!,"Dex & Lex voltarão...
+no lançamento na Steam","Dex và Lex sẽ trở lại trong...
+Phiên bản trên Steam"

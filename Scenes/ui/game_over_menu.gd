@@ -26,7 +26,7 @@ func game_over():
 	get_tree().paused = true
 
 func victory():
-	title.text = "VICTORY"
+	title.text = "_VICTORY_TITLE"
 	subtitle.show()
 	subtitle.text = randomTexts.pick_random()
 	

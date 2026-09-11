@@ -96,6 +96,10 @@ attack={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://Assets/localization/Proto Signal Localization - Sheet1.af.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.de.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.en.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.fr.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.pt.translation", "res://Assets/localization/Proto Signal Localization - Sheet1.vi.translation")
+
 [layer_names]
 
 2d_physics/layer_1="Physical Objects"

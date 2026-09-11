@@ -245,7 +245,7 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("6_7owla")
 theme_override_font_sizes/font_size = 32
-text = "Press Space to skip"
+text = "_SC_SKIP"
 
 [node name="JamLogo" type="MarginContainer" parent="." unique_id=685791193]
 layout_mode = 1
