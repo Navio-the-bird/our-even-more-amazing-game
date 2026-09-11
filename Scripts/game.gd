@@ -31,12 +31,8 @@ var battle_track_player:CustomAudioStreamPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	active_enemy_towers = []
-	if randf() < 0.5:
-		battle_track_player = %BattleTrack1
-	else:
-		battle_track_player = %BattleTrack2
+	%Musicbox/MenuTrack.play()
 		
-	battle_track_player.play()
 	await get_tree().create_timer(1).timeout
 	%MainMenu/PlayerSelect.SelectedKatanaPlayer.connect(_select_player_katana)
 	%MainMenu/PlayerSelect.SelectedSniperPlayer.connect(_select_player_sniper)
@@ -104,6 +100,9 @@ func _start_combat():
 	%MainMenu.hide()
 	%Hud.set_tower_count(TOWER_AMT)
 	%Hud.show()
+	
+	%Musicbox/MenuTrack.stop()
+	%Musicbox/BattleTrack.play()
 
 func _get_random_tower_config():
 	var tc := EnemyTowerConfig.new()
