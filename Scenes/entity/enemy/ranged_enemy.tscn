@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://bi8qfirrbosjc" path="res://Scripts/entity/enemy/ranged_enemy.gd" id="2_5x7gc"]
 [ext_resource type="PackedScene" uid="uid://wwk1bht5ds86" path="res://Scenes/entity/enemy/enemy_projectile.tscn" id="3_1qm41"]
 [ext_resource type="Texture2D" uid="uid://c4gxutvk0kni7" path="res://Assets/r_e_idle_1.png" id="4_bvp7b"]
+[ext_resource type="PackedScene" uid="uid://cvh7kqri6spxb" path="res://Scenes/hit.tscn" id="4_haeg2"]
 [ext_resource type="Texture2D" uid="uid://chemrxpfgt85c" path="res://Assets/r_e_idle_2.png" id="5_lcaim"]
+[ext_resource type="PackedScene" uid="uid://csys7l3toxkvx" path="res://Scenes/Boom.tscn" id="5_m1h8n"]
 [ext_resource type="Texture2D" uid="uid://c1ft5bek38fy8" path="res://Assets/r_e_idle_3.png" id="6_pbmq5"]
 [ext_resource type="AudioStream" uid="uid://lmnurk48peqp" path="res://Assets/SFX/Enemies shot.mp3" id="8_m1h8n"]
 
@@ -31,6 +33,8 @@ animations = [{
 [node name="RangedEnemy" unique_id=1572276426 instance=ExtResource("1_msnv5")]
 script = ExtResource("2_5x7gc")
 projectile_scene = ExtResource("3_1qm41")
+hit_effect_scene = ExtResource("4_haeg2")
+death_effect_scene = ExtResource("5_m1h8n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=381256719]
 shape = SubResource("RectangleShape2D_03w70")

@@ -10,8 +10,26 @@
 [ext_resource type="Texture2D" uid="uid://bf83lxi38p482" path="res://Assets/main_menu/character_selection/Dex.png" id="5_rfo86"]
 [ext_resource type="Texture2D" uid="uid://48gypvf44kut" path="res://Assets/main_menu/character_selection/Lex.png" id="7_875cn"]
 [ext_resource type="Texture2D" uid="uid://djvefd0nmme0i" path="res://Assets/main_menu/menu/menu logo.png" id="8_rfo86"]
-[ext_resource type="Script" uid="uid://sdewrfsxdggk" path="res://Scenes/ui/main_menu/options.gd" id="11_875cn"]
-[ext_resource type="Texture2D" uid="uid://dhl2sk80vkn1u" path="res://Assets/main_menu/menu/slider_grabber.svg" id="12_cirel"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_875cn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cirel"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3roab"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bioxs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eti8j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iub1y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixau1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn41j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy7cl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8essn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3erb8"]
 bg_color = Color(0.28235295, 0.28235295, 0.37254903, 1)
@@ -88,117 +106,6 @@ shadow_color = Color(0.9882353, 0.8901961, 0.72156864, 1)
 shadow_size = 2
 shadow_offset = Vector2(4, 4)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_875cn"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cirel"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3roab"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bioxs"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eti8j"]
-
-[sub_resource type="Gradient" id="Gradient_rfo86"]
-colors = PackedColorArray(0, 0, 0, 0.49803922, 0, 0, 0, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ejfn5"]
-gradient = SubResource("Gradient_rfo86")
-fill_to = Vector2(0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iub1y"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixau1"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn41j"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy7cl"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8essn"]
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_875cn"]
-color = Color(0.28235295, 0.28235295, 0.37254903, 1)
-thickness = 32
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_cirel"]
-color = Color(0.5176471, 0.6, 0.8627451, 1)
-thickness = 32
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_3roab"]
-color = Color(0.7486743, 0.79761076, 0.93973297, 1)
-thickness = 32
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40ksg"]
-bg_color = Color(0.28235295, 0.28235295, 0.37254903, 1)
-expand_margin_left = 20.0
-expand_margin_top = 20.0
-expand_margin_right = 20.0
-expand_margin_bottom = 20.0
-shadow_color = Color(0.2, 0.20392157, 0.28235295, 1)
-shadow_size = 3
-shadow_offset = Vector2(2, 2)
-
-[sub_resource type="Theme" id="Theme_cirel"]
-PopupMenu/font_sizes/font_size = 32
-PopupMenu/fonts/font = ExtResource("5_1rgip")
-PopupMenu/styles/panel = SubResource("StyleBoxFlat_40ksg")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04k7k"]
-bg_color = Color(0.28235295, 0.28235295, 0.37254903, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.2, 0.20392157, 0.28235295, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-expand_margin_left = 40.0
-expand_margin_top = 20.0
-expand_margin_right = 40.0
-expand_margin_bottom = 20.0
-shadow_color = Color(0.2, 0.20392157, 0.28235295, 1)
-shadow_size = 2
-shadow_offset = Vector2(4, 4)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_noe8y"]
-bg_color = Color(0.19406042, 0.19397923, 0.2624592, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.12482601, 0.12759292, 0.18368354, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-expand_margin_left = 40.0
-expand_margin_top = 20.0
-expand_margin_right = 40.0
-expand_margin_bottom = 20.0
-shadow_color = Color(0.1254902, 0.12941177, 0.18431373, 1)
-shadow_size = 2
-shadow_offset = Vector2(4, 4)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7c1c6"]
-bg_color = Color(0.5179918, 0.6016439, 0.86193734, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.9882353, 0.8901961, 0.72156864, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-expand_margin_left = 40.0
-expand_margin_top = 20.0
-expand_margin_right = 40.0
-expand_margin_bottom = 20.0
-shadow_color = Color(0.9882353, 0.8901961, 0.72156864, 1)
-shadow_size = 2
-shadow_offset = Vector2(4, 4)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ort52"]
 bg_color = Color(0, 0, 0, 0.7058824)
 corner_radius_top_left = 50
@@ -223,6 +130,172 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_5isg7")
+
+[node name="PlayerSelect" type="Control" parent="." unique_id=586804313]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ort52")
+
+[node name="ColorRect" type="ColorRect" parent="PlayerSelect" unique_id=1122816399]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7058824)
+
+[node name="CharacterMargin" type="MarginContainer" parent="PlayerSelect" unique_id=1229388840]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 430
+theme_override_constants/margin_top = 220
+theme_override_constants/margin_right = 430
+theme_override_constants/margin_bottom = 180
+
+[node name="GridContainer" type="HBoxContainer" parent="PlayerSelect/CharacterMargin" unique_id=1481363172]
+layout_mode = 2
+theme_override_constants/separation = 300
+alignment = 1
+
+[node name="KatanaPlayerSelect" type="Button" parent="PlayerSelect/CharacterMargin/GridContainer" unique_id=8299723]
+clip_children = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_875cn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cirel")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3roab")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bioxs")
+theme_override_styles/focus = SubResource("StyleBoxFlat_eti8j")
+script = ExtResource("3_3xdky")
+
+[node name="TextureRect" type="TextureRect" parent="PlayerSelect/CharacterMargin/GridContainer/KatanaPlayerSelect" unique_id=407008754]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_rfo86")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PlayerSelect/CharacterMargin/GridContainer/KatanaPlayerSelect" unique_id=115055394]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/bold_font = ExtResource("5_1rgip")
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
+text = "[b]Dex[/b]
+Light Saber"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SniperPlayerSelect" type="Button" parent="PlayerSelect/CharacterMargin/GridContainer" unique_id=682747321]
+clip_children = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_iub1y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ixau1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qn41j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_uy7cl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8essn")
+script = ExtResource("3_3xdky")
+
+[node name="TextureRect" type="TextureRect" parent="PlayerSelect/CharacterMargin/GridContainer/SniperPlayerSelect" unique_id=1356765998]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_875cn")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PlayerSelect/CharacterMargin/GridContainer/SniperPlayerSelect" unique_id=747730682]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/bold_font = ExtResource("5_1rgip")
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
+text = "[b]Lex[/b]
+Laser Crossbow"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButtonMargin" type="MarginContainer" parent="PlayerSelect" unique_id=1690146250]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 1600
+theme_override_constants/margin_top = 920
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="BackButton" type="Button" parent="PlayerSelect/BackButtonMargin" unique_id=580121702]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_1rgip")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_3erb8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rbwmf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1rgip")
+text = "Back"
+script = ExtResource("4_3erb8")
+
+[node name="TitleMargin" type="MarginContainer" parent="PlayerSelect" unique_id=710050947]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 900
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PlayerSelect/TitleMargin" unique_id=782370156]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_1rgip")
+theme_override_font_sizes/normal_font_size = 100
+text = "CHOOSE YOUR PROTOGEN"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Main" type="Control" parent="." unique_id=1541565617]
 unique_name_in_owner = true
@@ -348,362 +421,6 @@ layout_mode = 2
 texture = ExtResource("4_1ggui")
 expand_mode = 2
 stretch_mode = 5
-
-[node name="PlayerSelect" type="Control" parent="." unique_id=586804313]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("2_ort52")
-
-[node name="ColorRect" type="ColorRect" parent="PlayerSelect" unique_id=1122816399]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.7058824)
-
-[node name="CharacterMargin" type="MarginContainer" parent="PlayerSelect" unique_id=1229388840]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 430
-theme_override_constants/margin_top = 220
-theme_override_constants/margin_right = 430
-theme_override_constants/margin_bottom = 180
-
-[node name="GridContainer" type="HBoxContainer" parent="PlayerSelect/CharacterMargin" unique_id=1481363172]
-layout_mode = 2
-theme_override_constants/separation = 300
-alignment = 1
-
-[node name="KatanaPlayerSelect" type="Button" parent="PlayerSelect/CharacterMargin/GridContainer" unique_id=8299723]
-clip_children = 2
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_875cn")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_cirel")
-theme_override_styles/hover = SubResource("StyleBoxFlat_3roab")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_bioxs")
-theme_override_styles/focus = SubResource("StyleBoxFlat_eti8j")
-script = ExtResource("3_3xdky")
-
-[node name="ColorRect" type="ColorRect" parent="PlayerSelect/CharacterMargin/GridContainer/KatanaPlayerSelect" unique_id=1946414078]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-offset_transform_enabled = true
-offset_transform_scale = Vector2(10, 10)
-
-[node name="MarginContainer" type="MarginContainer" parent="PlayerSelect/CharacterMargin/GridContainer/KatanaPlayerSelect" unique_id=1698521360]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="TextureRect" type="TextureRect" parent="PlayerSelect/CharacterMargin/GridContainer/KatanaPlayerSelect/MarginContainer" unique_id=407008754]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("5_rfo86")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="TextureRect" type="TextureRect" parent="PlayerSelect/CharacterMargin/GridContainer/KatanaPlayerSelect/MarginContainer/TextureRect" unique_id=767363288]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-grow_horizontal = 2
-texture = SubResource("GradientTexture2D_ejfn5")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="PlayerSelect/CharacterMargin/GridContainer/KatanaPlayerSelect/MarginContainer/TextureRect/TextureRect" unique_id=115055394]
-custom_minimum_size = Vector2(0, 150)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_fonts/bold_font = ExtResource("5_1rgip")
-theme_override_font_sizes/normal_font_size = 25
-theme_override_font_sizes/bold_font_size = 64
-bbcode_enabled = true
-text = "[img=300]res://Assets/name_typography/Dex.png[/img]
-Lightsaber - Melee"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="SniperPlayerSelect" type="Button" parent="PlayerSelect/CharacterMargin/GridContainer" unique_id=682747321]
-clip_children = 2
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_iub1y")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ixau1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_qn41j")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_uy7cl")
-theme_override_styles/focus = SubResource("StyleBoxFlat_8essn")
-script = ExtResource("3_3xdky")
-
-[node name="ColorRect" type="ColorRect" parent="PlayerSelect/CharacterMargin/GridContainer/SniperPlayerSelect" unique_id=1531430594]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-offset_transform_enabled = true
-offset_transform_scale = Vector2(10, 10)
-
-[node name="MarginContainer" type="MarginContainer" parent="PlayerSelect/CharacterMargin/GridContainer/SniperPlayerSelect" unique_id=1285266559]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="TextureRect" type="TextureRect" parent="PlayerSelect/CharacterMargin/GridContainer/SniperPlayerSelect/MarginContainer" unique_id=1356765998]
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("7_875cn")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="TextureRect" type="TextureRect" parent="PlayerSelect/CharacterMargin/GridContainer/SniperPlayerSelect/MarginContainer/TextureRect" unique_id=362317647]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-grow_horizontal = 2
-texture = SubResource("GradientTexture2D_ejfn5")
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="PlayerSelect/CharacterMargin/GridContainer/SniperPlayerSelect/MarginContainer/TextureRect/TextureRect" unique_id=747730682]
-custom_minimum_size = Vector2(0, 150)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_fonts/bold_font = ExtResource("5_1rgip")
-theme_override_font_sizes/normal_font_size = 25
-theme_override_font_sizes/bold_font_size = 64
-bbcode_enabled = true
-text = "[img=240]res://Assets/name_typography/Lex.png[/img]
-Laser Crossbow - Ranged"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="BackButtonMargin" type="MarginContainer" parent="PlayerSelect" unique_id=1690146250]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_constants/margin_left = 1600
-theme_override_constants/margin_top = 920
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 50
-
-[node name="BackButton" type="Button" parent="PlayerSelect/BackButtonMargin" unique_id=580121702]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("5_1rgip")
-theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_3erb8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_rbwmf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_1rgip")
-text = "Back"
-script = ExtResource("4_3erb8")
-
-[node name="TitleMargin" type="MarginContainer" parent="PlayerSelect" unique_id=710050947]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_bottom = 900
-
-[node name="RichTextLabel" type="RichTextLabel" parent="PlayerSelect/TitleMargin" unique_id=782370156]
-layout_mode = 2
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("5_1rgip")
-theme_override_font_sizes/normal_font_size = 100
-text = "CHOOSE YOUR PROTOGEN"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Options" type="Control" parent="." unique_id=1954748956]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("11_875cn")
-
-[node name="ColorRect" type="ColorRect" parent="Options" unique_id=1357896567]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.7058824)
-
-[node name="CharacterMargin" type="MarginContainer" parent="Options" unique_id=1578936257]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 430
-theme_override_constants/margin_top = 240
-theme_override_constants/margin_right = 430
-theme_override_constants/margin_bottom = 180
-
-[node name="GridContainer" type="VBoxContainer" parent="Options/CharacterMargin" unique_id=1174600821]
-layout_mode = 2
-theme_override_constants/separation = 80
-
-[node name="Audio" type="HBoxContainer" parent="Options/CharacterMargin/GridContainer" unique_id=898129010]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Options/CharacterMargin/GridContainer/Audio" unique_id=33793481]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("5_1rgip")
-theme_override_font_sizes/font_size = 48
-text = "Audio Volume"
-
-[node name="AudioSlider" type="HSlider" parent="Options/CharacterMargin/GridContainer/Audio" unique_id=655062259]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-offset_transform_enabled = true
-offset_transform_scale = Vector2(1.125, 1.125)
-theme_override_icons/grabber = ExtResource("12_cirel")
-theme_override_icons/grabber_highlight = ExtResource("12_cirel")
-theme_override_styles/slider = SubResource("StyleBoxLine_875cn")
-theme_override_styles/grabber_area = SubResource("StyleBoxLine_cirel")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_3roab")
-max_value = 1.0
-step = 0.05
-value = 0.8
-
-[node name="Screen Mode" type="HBoxContainer" parent="Options/CharacterMargin/GridContainer" unique_id=183181693]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Options/CharacterMargin/GridContainer/Screen Mode" unique_id=1418471699]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("5_1rgip")
-theme_override_font_sizes/font_size = 48
-text = "Screen Mode"
-
-[node name="ScreenModeDropdown" type="OptionButton" parent="Options/CharacterMargin/GridContainer/Screen Mode" unique_id=1529545560]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = SubResource("Theme_cirel")
-theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("5_1rgip")
-theme_override_font_sizes/font_size = 42
-theme_override_styles/normal = SubResource("StyleBoxFlat_04k7k")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_noe8y")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7c1c6")
-selected = 0
-allow_reselect = true
-item_count = 3
-popup/item_0/text = "Windowed"
-popup/item_0/id = 0
-popup/item_1/text = "Borderless Windowed"
-popup/item_1/id = 2
-popup/item_2/text = "Fullscreen"
-popup/item_2/id = 1
-
-[node name="BackButtonMargin" type="MarginContainer" parent="Options" unique_id=1652727503]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_constants/margin_left = 1600
-theme_override_constants/margin_top = 920
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 50
-
-[node name="BackButton" type="Button" parent="Options/BackButtonMargin" unique_id=499790143]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("5_1rgip")
-theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_3erb8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_rbwmf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_1rgip")
-text = "Back"
-script = ExtResource("4_3erb8")
-
-[node name="TitleMargin" type="MarginContainer" parent="Options" unique_id=620916469]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_bottom = 900
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Options/TitleMargin" unique_id=210561494]
-layout_mode = 2
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/normal_font = ExtResource("5_1rgip")
-theme_override_font_sizes/normal_font_size = 100
-text = "OPTIONS"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Credits" type="Control" parent="." unique_id=1668000348]
 unique_name_in_owner = true
@@ -894,14 +611,13 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_1rgip")
 text = "Back"
 script = ExtResource("4_3erb8")
 
-[connection signal="delayed_pressed" from="Main/MarginContainer/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="delayed_pressed" from="Main/MarginContainer/VBoxContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_delayed_pressed"]
-[connection signal="delayed_pressed" from="Main/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="delayed_pressed" from="Main/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="PlayerSelect/CharacterMargin/GridContainer/KatanaPlayerSelect" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="PlayerSelect/CharacterMargin/GridContainer/KatanaPlayerSelect" to="PlayerSelect" method="_select_katana_player"]
 [connection signal="pressed" from="PlayerSelect/CharacterMargin/GridContainer/SniperPlayerSelect" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="PlayerSelect/CharacterMargin/GridContainer/SniperPlayerSelect" to="PlayerSelect" method="_select_sniper_player"]
 [connection signal="delayed_pressed" from="PlayerSelect/BackButtonMargin/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="delayed_pressed" from="Options/BackButtonMargin/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="delayed_pressed" from="Main/MarginContainer/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="delayed_pressed" from="Main/MarginContainer/VBoxContainer/VBoxContainer/OptionsButton" to="." method="_on_play_button_pressed"]
+[connection signal="delayed_pressed" from="Main/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="delayed_pressed" from="Main/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="delayed_pressed" from="Credits/BackButtonMargin/BackButton" to="." method="_on_back_button_pressed"]

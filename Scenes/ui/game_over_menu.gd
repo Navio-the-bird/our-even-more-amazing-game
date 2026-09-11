@@ -14,6 +14,8 @@ var victory_animation_time: float = 0.5
 func _ready() -> void:
 	subtitle.hide()
 	self.hide()
+	
+	victory()
 
 func _unpause_game():
 	self.hide()

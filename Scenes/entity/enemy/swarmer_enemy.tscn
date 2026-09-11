@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://ddl3jmeul8ca" path="res://Scenes/entity/enemy/base_enemy.tscn" id="1_4xa7c"]
 [ext_resource type="Script" uid="uid://doi8o7dnmi4hh" path="res://Scripts/entity/enemy/swarmer_enemy.gd" id="1_12on1"]
 [ext_resource type="Texture2D" uid="uid://xduuglo70ntt" path="res://Assets/swarmer_enemy1.png" id="3_36toy"]
+[ext_resource type="PackedScene" uid="uid://cvh7kqri6spxb" path="res://Scenes/hit.tscn" id="3_pr2bv"]
+[ext_resource type="PackedScene" uid="uid://csys7l3toxkvx" path="res://Scenes/Boom.tscn" id="4_fnt1o"]
 [ext_resource type="Texture2D" uid="uid://dbqi0ca7y6up3" path="res://Assets/swarmer_enemy2.png" id="4_pr2bv"]
 [ext_resource type="Texture2D" uid="uid://dhl3xu7pmfhi6" path="res://Assets/swarmer_enemy3.png" id="5_fnt1o"]
 
@@ -28,6 +30,8 @@ animations = [{
 
 [node name="BaseEnemy" unique_id=262025010 instance=ExtResource("1_4xa7c")]
 script = ExtResource("1_12on1")
+hit_effect_scene = ExtResource("3_pr2bv")
+death_effect_scene = ExtResource("4_fnt1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=19719097]
 shape = SubResource("CircleShape2D_wsate")
