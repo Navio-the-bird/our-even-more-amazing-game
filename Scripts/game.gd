@@ -62,6 +62,8 @@ func _on_pause_menu_quit_game() -> void:
 	%Hud.hide()
 	%PauseMenu.hide()
 	%MainMenu.show()
+	%Musicbox/BattleTrack.stop()
+	%Musicbox/MenuTrack.play()
 
 func _on_tower_destroy(obj:EnemyTower):
 	active_enemy_towers.erase(obj)

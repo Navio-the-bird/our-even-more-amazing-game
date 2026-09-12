@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cohiqpndtgam"]
 
 [ext_resource type="Script" uid="uid://ccuhxg66ocf2q" path="res://Scenes/entity/enemy/base_enemy.gd" id="1_fnooy"]
+[ext_resource type="PackedScene" uid="uid://b0dasih24ywap" path="res://Scenes/hit.tscn" id="2_fnooy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ssmoh"]
 radius = 162.73291
@@ -9,6 +10,7 @@ radius = 162.73291
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_fnooy")
+hit_effect = ExtResource("2_fnooy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1951048710]
 shape = SubResource("CircleShape2D_ssmoh")

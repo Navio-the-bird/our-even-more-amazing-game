@@ -95,6 +95,7 @@ grow_vertical = 0
 texture = SubResource("GradientTexture2D_ejfn5")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="BottomBar" unique_id=1211955239]
+visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5

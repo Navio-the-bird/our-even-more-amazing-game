@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://b0dasih24ywap"]
+
+[ext_resource type="Texture2D" uid="uid://dvxj2rorwucab" path="res://Assets/Hit.png" id="1_j75ti"]
+
+[sub_resource type="GDScript" id="GDScript_uhvcu"]
+script/source = "extends Node2D
+
+
+@onready var anim = $AnimatedSprite2D
+
+func _ready() -> void:
+	anim.play(\"Hit\")
+	anim.animation_finished.connect(queue_free)
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ngqx"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(0, 0, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cg6q"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(2000, 0, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18dbl"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(4000, 0, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yb34i"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(6000, 0, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_158up"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(0, 700, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tigpf"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(2000, 700, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f6rd"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(4000, 700, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kw30"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(6000, 700, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs7qk"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(0, 1400, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smgkj"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(2000, 1400, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox4tr"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(4000, 1400, 2000, 700)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d42nx"]
+atlas = ExtResource("1_j75ti")
+region = Rect2(6000, 1400, 2000, 700)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vxjv0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ngqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cg6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18dbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yb34i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_158up")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tigpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f6rd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kw30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gs7qk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smgkj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ox4tr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d42nx")
+}],
+"loop": 0,
+"name": &"Hit",
+"speed": 16.0
+}]
+
+[node name="Hit" type="Node2D" unique_id=294995167]
+script = SubResource("GDScript_uhvcu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1768065983]
+sprite_frames = SubResource("SpriteFrames_vxjv0")
+animation = &"Hit"
+frame = 11
+frame_progress = 1.0

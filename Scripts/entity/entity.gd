@@ -87,6 +87,7 @@ func inflict_damage(object:Node2D, value:int) -> void:
 		_just_died()
 		return
 
+@export var hit_effect: PackedScene #for my hit animation
 var damage_tween:Tween
 func _indicate_damage() -> void:
 	if (!sprite):
@@ -98,6 +99,14 @@ func _indicate_damage() -> void:
 	damage_tween = create_tween()
 	sprite.modulate = Color(0.912, 0.0, 0.121, 0.502)
 	damage_tween.tween_property(sprite, "modulate", Color.WHITE, 0.30)
+	_spawn_hit_effect() #for my hit animation
+
+func _spawn_hit_effect() -> void: #for my hit animation
+	if not hit_effect:
+		return
+	var fx := hit_effect.instantiate()
+	get_parent().add_child(fx)
+	fx.global_position = global_position
 
 func _just_died():
 	_alive = false
